@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comparador Side-by-Side: Estudio Streaming Pro</title>
-  <meta name="description" content="Compara especificaciones técnicas, precios oficiales y valoraciones de hardware de streaming y podcasting en tiempo real.">
+  <title>Comparador de hardware para streaming y podcast | Estudio Streaming Pro</title>
+  <meta name="description" content="Compara dos equipos de streaming y podcast por conexión, formato y uso recomendado antes de consultar la oferta.">
+  <meta name="theme-color" content="#11171d">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/styles.css?v=taste_agency_v3_syne">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="is-premium-page">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <!-- Ambient Space Atmosphere -->
   <div class="ambient-glow" aria-hidden="true"></div>
   <div class="ambient-grid-overlay" aria-hidden="true"></div>
@@ -18,7 +21,7 @@
   <!-- Transparent Affiliate Bar -->
   <aside class="affiliate-disclosure-bar">
     <div class="container">
-      En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Precios verificados en tiempo real.
+      Esta guía contiene enlaces de afiliación. El precio y la disponibilidad se confirman en Amazon al abrir la oferta.
     </div>
   </aside>
 
@@ -33,10 +36,10 @@
       <!-- Desktop Navigation -->
       <nav aria-label="Navegación principal">
         <ul class="nav-menu">
-          <li><a href="index.html#hardware">Hardware de Estudio</a></li>
-          <li><a href="comparador.html" style="color: var(--studio-cyan);">Comparador Side-by-Side</a></li>
-          <li><a href="index.html#criterios">Criterios de Audio</a></li>
-          <li><a href="index.html#faq">Dudas Frecuentes</a></li>
+          <li><a href="index.html#hardware">Equipo</a></li>
+          <li><a href="comparador.html" style="color: var(--studio-cyan);">Comparador</a></li>
+          <li><a href="index.html#criterios">Guía de compra</a></li>
+          <li><a href="index.html#faq">Preguntas</a></li>
           <li>
             <a href="index.html" class="btn-secondary" style="padding: 6px 16px;">
               Volver al Inicio
@@ -57,9 +60,9 @@
   <div class="nav-drawer" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Menú móvil">
     <ul class="nav-drawer-menu">
       <li><a href="index.html" class="mobile-nav-link">Inicio / Catálogo</a></li>
-      <li><a href="comparador.html" class="mobile-nav-link" style="color: var(--studio-cyan);">Comparador Side-by-Side</a></li>
-      <li><a href="index.html#criterios" class="mobile-nav-link">Criterios de Audio</a></li>
-      <li><a href="index.html#faq" class="mobile-nav-link">Dudas Frecuentes</a></li>
+      <li><a href="comparador.html" class="mobile-nav-link" style="color: var(--studio-cyan);">Comparador</a></li>
+      <li><a href="index.html#criterios" class="mobile-nav-link">Guía de compra</a></li>
+      <li><a href="index.html#faq" class="mobile-nav-link">Preguntas</a></li>
       <li>
         <a href="index.html" class="btn-secondary" style="width: 100%; text-align: center; margin-top: 8px;">
           Volver a la Portada
@@ -68,28 +71,36 @@
     </ul>
   </div>
 
-  <main class="container" style="padding: 60px 0 90px;">
+  <main id="contenido" class="container" style="padding: 60px 0 90px;">
     <div class="section-headline">
       <div class="hero-tag" style="margin-bottom: 16px;">
         <span class="hero-tag-led" aria-hidden="true"></span>
-        <span>Consola Comparativa de Hardware</span>
+        <span>Compara con contexto</span>
       </div>
       <h1 class="hero-title" style="font-size: clamp(2.1rem, 4vw, 3.2rem); margin-bottom: 16px;">
-        Comparador <span class="highlight">Side-by-Side</span> de Estudio
+        Compara <span class="highlight">dos equipos</span> con criterio.
       </h1>
       <p class="section-desc">
-        Filtra y contrasta especificaciones técnicas oficiales, protocolos de conectividad, calidades de muestreo y ofertas actualizadas en Amazon España.
+        Elige dos equipos y consulta sus datos esenciales antes de abrir la oferta en Amazon.
       </p>
     </div>
 
     <!-- Category Filter Tabs (Tactical Studio Buttons) -->
-    <div style="display: flex; gap: 10px; margin-bottom: 36px; flex-wrap: wrap;" role="toolbar" aria-label="Filtros de categoría">
-      <button class="btn-secondary comp-filter-btn active" data-category="all">Todos los Equipos (7)</button>
-      <button class="btn-secondary comp-filter-btn" data-category="INSIGNIA">Consolas de Control</button>
-      <button class="btn-secondary comp-filter-btn" data-category="PREMIUM">Gama Alta de Estudio</button>
-      <button class="btn-secondary comp-filter-btn" data-category="CALIDAD_PRECIO">Calidad / Precio DSP</button>
-      <button class="btn-secondary comp-filter-btn" data-category="CROSS_SELLING">Soporte & Iluminación</button>
+    <div class="premium-comparison-filters" role="toolbar" aria-label="Filtrar por categoría">
+      <button class="comp-filter-btn active" data-category="all" aria-pressed="true">Todo el equipo</button>
+      <button class="comp-filter-btn" data-category="INSIGNIA" aria-pressed="false">Control</button>
+      <button class="comp-filter-btn" data-category="PREMIUM" aria-pressed="false">Micrófonos</button>
+      <button class="comp-filter-btn" data-category="CALIDAD_PRECIO" aria-pressed="false">Setup compacto</button>
+      <button class="comp-filter-btn" data-category="CROSS_SELLING" aria-pressed="false">Soporte y luz</button>
     </div>
+
+    <aside class="premium-comparison-dock" aria-live="polite">
+      <div>
+        <span>Comparación</span>
+        <strong data-compare-status>Elige hasta dos equipos</strong>
+      </div>
+      <button class="premium-compare-open" type="button" data-compare-open disabled>Ver comparación</button>
+    </aside>
 
     <!-- Doppelrand Comparison Grid -->
     <div class="bento-showcase">
@@ -99,7 +110,7 @@
         <div class="bento-card-inner">
           <span class="hardware-badge badge-flagship">Centro de Control Insignia</span>
           <div style="background: var(--bg-card-nested); border-radius: var(--radius-md); padding: 20px; text-align: center; margin-bottom: 16px; border: 1px solid var(--border-dim); min-height: 180px; display: flex; align-items: center; justify-content: center;">
-            <img src="assets/img/B09738CV2G.jpg" alt="Elgato Stream Deck MK.2 con 15 Teclas LCD Macro" loading="lazy" style="max-height: 140px; margin: 0 auto;">
+            <img src="assets/img/B09738CV2G.jpg" alt="Elgato Stream Deck MK.2 con 15 Teclas LCD Macro" width="800" height="800" loading="lazy" style="max-height: 140px; margin: 0 auto;">
           </div>
           <h2 class="card-title" style="font-size: 1.18rem;"><a href="fichas/elgato-stream-deck-mk2.html">Elgato Stream Deck MK.2 con 15 Teclas LCD Macro</a></h2>
           <div class="price-display" style="margin-bottom: 10px;">119.00 €</div>
@@ -110,7 +121,7 @@
             <div class='spec-row'><span class='spec-key'>Peso</span><span class='spec-value'>145 g (sin soporte)</span></div>
           </div>
           <div style="display: flex; gap: 8px; margin-top: auto; align-items: center;">
-            <a href="fichas/elgato-stream-deck-mk2.html" class="btn-secondary" style="flex: 1; text-align: center;">Ficha & Radar</a>
+            <a href="fichas/elgato-stream-deck-mk2.html" class="btn-secondary" style="flex: 1; text-align: center;">Ver ficha</a>
             <a href="https://www.amazon.es/dp/B09738CV2G?tag=compraacertada-21" class="btn-cta" style="flex: 1;" target="_blank" rel="nofollow sponsored noopener noreferrer">
               <span>Ver Oferta</span>
               <span class="btn-icon-bubble" aria-hidden="true">↗</span>
@@ -124,7 +135,7 @@
         <div class="bento-card-inner">
           <span class="hardware-badge badge-studio">Micrófono de Condensador</span>
           <div style="background: var(--bg-card-nested); border-radius: var(--radius-md); padding: 20px; text-align: center; margin-bottom: 16px; border: 1px solid var(--border-dim); min-height: 180px; display: flex; align-items: center; justify-content: center;">
-            <img src="assets/img/B088HHWC47.jpg" alt="Elgato Wave:3 Micrófono Condensador USB con Clipguard" loading="lazy" style="max-height: 140px; margin: 0 auto;">
+            <img src="assets/img/B088HHWC47.jpg" alt="Elgato Wave:3 Micrófono Condensador USB con Clipguard" width="800" height="800" loading="lazy" style="max-height: 140px; margin: 0 auto;">
           </div>
           <h2 class="card-title" style="font-size: 1.18rem;"><a href="fichas/elgato-wave-3.html">Elgato Wave:3 Micrófono Condensador USB con Clipguard</a></h2>
           <div class="price-display" style="margin-bottom: 10px;">99.99 €</div>
@@ -135,7 +146,7 @@
             <div class='spec-row'><span class='spec-key'>Frecuencia</span><span class='spec-value'>70 Hz - 20.000 Hz</span></div>
           </div>
           <div style="display: flex; gap: 8px; margin-top: auto; align-items: center;">
-            <a href="fichas/elgato-wave-3.html" class="btn-secondary" style="flex: 1; text-align: center;">Ficha & Radar</a>
+            <a href="fichas/elgato-wave-3.html" class="btn-secondary" style="flex: 1; text-align: center;">Ver ficha</a>
             <a href="https://www.amazon.es/dp/B088HHWC47?tag=compraacertada-21" class="btn-cta" style="flex: 1;" target="_blank" rel="nofollow sponsored noopener noreferrer">
               <span>Ver Oferta</span>
               <span class="btn-icon-bubble" aria-hidden="true">↗</span>
@@ -149,7 +160,7 @@
         <div class="bento-card-inner">
           <span class="hardware-badge badge-studio">Referencia de Estudio</span>
           <div style="background: var(--bg-card-nested); border-radius: var(--radius-md); padding: 20px; text-align: center; margin-bottom: 16px; border: 1px solid var(--border-dim); min-height: 180px; display: flex; align-items: center; justify-content: center;">
-            <img src="assets/img/B0002E4Z8M.jpg" alt="Shure SM7B Micrófono Dinámico Vocal de Referencia" loading="lazy" style="max-height: 140px; margin: 0 auto;">
+            <img src="assets/img/B0002E4Z8M.jpg" alt="Shure SM7B Micrófono Dinámico Vocal de Referencia" width="800" height="800" loading="lazy" style="max-height: 140px; margin: 0 auto;">
           </div>
           <h2 class="card-title" style="font-size: 1.18rem;"><a href="fichas/shure-sm7b.html">Shure SM7B Micrófono Dinámico Vocal de Referencia</a></h2>
           <div class="price-display" style="margin-bottom: 10px;">398.00 €</div>
@@ -160,7 +171,7 @@
             <div class='spec-row'><span class='spec-key'>Conector</span><span class='spec-value'>XLR balanceado</span></div>
           </div>
           <div style="display: flex; gap: 8px; margin-top: auto; align-items: center;">
-            <a href="fichas/shure-sm7b.html" class="btn-secondary" style="flex: 1; text-align: center;">Ficha & Radar</a>
+            <a href="fichas/shure-sm7b.html" class="btn-secondary" style="flex: 1; text-align: center;">Ver ficha</a>
             <a href="https://www.amazon.es/dp/B0002E4Z8M?tag=compraacertada-21" class="btn-cta" style="flex: 1;" target="_blank" rel="nofollow sponsored noopener noreferrer">
               <span>Ver Oferta</span>
               <span class="btn-icon-bubble" aria-hidden="true">↗</span>
@@ -174,7 +185,7 @@
         <div class="bento-card-inner">
           <span class="hardware-badge badge-studio">Dinámico con DSP</span>
           <div style="background: var(--bg-card-nested); border-radius: var(--radius-md); padding: 20px; text-align: center; margin-bottom: 16px; border: 1px solid var(--border-dim); min-height: 180px; display: flex; align-items: center; justify-content: center;">
-            <img src="assets/img/B0DBJ5DBL8.jpg" alt="Shure MV6 Micrófono Dinámico USB con Procesador MOTIV DSP" loading="lazy" style="max-height: 140px; margin: 0 auto;">
+            <img src="assets/img/B0DBJ5DBL8.jpg" alt="Shure MV6 Micrófono Dinámico USB con Procesador MOTIV DSP" width="800" height="800" loading="lazy" style="max-height: 140px; margin: 0 auto;">
           </div>
           <h2 class="card-title" style="font-size: 1.18rem;"><a href="fichas/shure-mv6.html">Shure MV6 Micrófono Dinámico USB con Procesador MOTIV DSP</a></h2>
           <div class="price-display" style="margin-bottom: 10px;">148.74 €</div>
@@ -185,7 +196,7 @@
             <div class='spec-row'><span class='spec-key'>DSP</span><span class='spec-value'>Denoiser MOTIV activo</span></div>
           </div>
           <div style="display: flex; gap: 8px; margin-top: auto; align-items: center;">
-            <a href="fichas/shure-mv6.html" class="btn-secondary" style="flex: 1; text-align: center;">Ficha & Radar</a>
+            <a href="fichas/shure-mv6.html" class="btn-secondary" style="flex: 1; text-align: center;">Ver ficha</a>
             <a href="https://www.amazon.es/dp/B0DBJ5DBL8?tag=compraacertada-21" class="btn-cta" style="flex: 1;" target="_blank" rel="nofollow sponsored noopener noreferrer">
               <span>Ver Oferta</span>
               <span class="btn-icon-bubble" aria-hidden="true">↗</span>
@@ -199,7 +210,7 @@
         <div class="bento-card-inner">
           <span class="hardware-badge badge-support">Soporte de Perfil Bajo</span>
           <div style="background: var(--bg-card-nested); border-radius: var(--radius-md); padding: 20px; text-align: center; margin-bottom: 16px; border: 1px solid var(--border-dim); min-height: 180px; display: flex; align-items: center; justify-content: center;">
-            <img src="assets/img/B097376LKF.jpg" alt="Elgato Wave Mic Arm LP Brazo Articulado de Perfil Bajo" loading="lazy" style="max-height: 140px; margin: 0 auto;">
+            <img src="assets/img/B097376LKF.jpg" alt="Elgato Wave Mic Arm LP Brazo Articulado de Perfil Bajo" width="800" height="800" loading="lazy" style="max-height: 140px; margin: 0 auto;">
           </div>
           <h2 class="card-title" style="font-size: 1.18rem;"><a href="fichas/elgato-wave-mic-arm-lp.html">Elgato Wave Mic Arm LP Brazo Articulado de Perfil Bajo</a></h2>
           <div class="price-display" style="margin-bottom: 10px;">79.99 €</div>
@@ -210,7 +221,7 @@
             <div class='spec-row'><span class='spec-key'>Cables</span><span class='spec-value'>Canales magnéticos</span></div>
           </div>
           <div style="display: flex; gap: 8px; margin-top: auto; align-items: center;">
-            <a href="fichas/elgato-wave-mic-arm-lp.html" class="btn-secondary" style="flex: 1; text-align: center;">Ficha & Radar</a>
+            <a href="fichas/elgato-wave-mic-arm-lp.html" class="btn-secondary" style="flex: 1; text-align: center;">Ver ficha</a>
             <a href="https://www.amazon.es/dp/B097376LKF?tag=compraacertada-21" class="btn-cta" style="flex: 1;" target="_blank" rel="nofollow sponsored noopener noreferrer">
               <span>Ver Oferta</span>
               <span class="btn-icon-bubble" aria-hidden="true">↗</span>
@@ -224,7 +235,7 @@
         <div class="bento-card-inner">
           <span class="hardware-badge badge-support">Iluminación de Estudio</span>
           <div style="background: var(--bg-card-nested); border-radius: var(--radius-md); padding: 20px; text-align: center; margin-bottom: 16px; border: 1px solid var(--border-dim); min-height: 180px; display: flex; align-items: center; justify-content: center;">
-            <img src="assets/img/B07T8FBZC2.jpg" alt="NEEWER Kit de 2 Paneles de Luz LED USB Regulables 5600K" loading="lazy" style="max-height: 140px; margin: 0 auto;">
+            <img src="assets/img/B07T8FBZC2.jpg" alt="NEEWER Kit de 2 Paneles de Luz LED USB Regulables 5600K" width="800" height="800" loading="lazy" style="max-height: 140px; margin: 0 auto;">
           </div>
           <h2 class="card-title" style="font-size: 1.18rem;"><a href="fichas/neewer-kit-2-paneles-led-usb.html">NEEWER Kit de 2 Paneles de Luz LED USB Regulables 5600K</a></h2>
           <div class="price-display" style="margin-bottom: 10px;">44.81 €</div>
@@ -235,7 +246,7 @@
             <div class='spec-row'><span class='spec-key'>Trípodes</span><span class='spec-value'>Extensibles 22 a 116 cm</span></div>
           </div>
           <div style="display: flex; gap: 8px; margin-top: auto; align-items: center;">
-            <a href="fichas/neewer-kit-2-paneles-led-usb.html" class="btn-secondary" style="flex: 1; text-align: center;">Ficha & Radar</a>
+            <a href="fichas/neewer-kit-2-paneles-led-usb.html" class="btn-secondary" style="flex: 1; text-align: center;">Ver ficha</a>
             <a href="https://www.amazon.es/dp/B07T8FBZC2?tag=compraacertada-21" class="btn-cta" style="flex: 1;" target="_blank" rel="nofollow sponsored noopener noreferrer">
               <span>Ver Oferta</span>
               <span class="btn-icon-bubble" aria-hidden="true">↗</span>
@@ -249,7 +260,7 @@
         <div class="bento-card-inner">
           <span class="hardware-badge badge-flagship">Controlador Compacto</span>
           <div style="background: var(--bg-card-nested); border-radius: var(--radius-md); padding: 20px; text-align: center; margin-bottom: 16px; border: 1px solid var(--border-dim); min-height: 180px; display: flex; align-items: center; justify-content: center;">
-            <img src="assets/img/B0CVY4566H.jpg" alt="Elgato Stream Deck Neo con 8 Teclas LCD Compactas" loading="lazy" style="max-height: 140px; margin: 0 auto;">
+            <img src="assets/img/B0CVY4566H.jpg" alt="Elgato Stream Deck Neo con 8 Teclas LCD Compactas" width="800" height="800" loading="lazy" style="max-height: 140px; margin: 0 auto;">
           </div>
           <h2 class="card-title" style="font-size: 1.18rem;"><a href="fichas/elgato-stream-deck-neo.html">Elgato Stream Deck Neo con 8 Teclas LCD Compactas</a></h2>
           <div class="price-display" style="margin-bottom: 10px;">62.99 €</div>
@@ -260,7 +271,7 @@
             <div class='spec-row'><span class='spec-key'>Peso</span><span class='spec-value'>210 g</span></div>
           </div>
           <div style="display: flex; gap: 8px; margin-top: auto; align-items: center;">
-            <a href="fichas/elgato-stream-deck-neo.html" class="btn-secondary" style="flex: 1; text-align: center;">Ficha & Radar</a>
+            <a href="fichas/elgato-stream-deck-neo.html" class="btn-secondary" style="flex: 1; text-align: center;">Ver ficha</a>
             <a href="https://www.amazon.es/dp/B0CVY4566H?tag=compraacertada-21" class="btn-cta" style="flex: 1;" target="_blank" rel="nofollow sponsored noopener noreferrer">
               <span>Ver Oferta</span>
               <span class="btn-icon-bubble" aria-hidden="true">↗</span>
@@ -270,6 +281,14 @@
       </div>
       
     </div>
+
+    <section class="premium-comparison-result" data-comparison-result hidden aria-labelledby="comparison-result-title">
+      <div class="premium-comparison-result__heading">
+        <span>Selección</span>
+        <h2 id="comparison-result-title">Dos equipos, una decisión más clara.</h2>
+      </div>
+      <div class="premium-comparison-result__grid" data-comparison-table></div>
+    </section>
   </main>
 
   <!-- High-End Studio Footer -->
@@ -282,15 +301,15 @@
             <span>EstudioStreaming<span style="color: var(--studio-cyan);">Pro</span></span>
           </div>
           <p style="line-height: 1.75; margin-bottom: 16px; color: var(--text-body);">
-            Laboratorio editorial independiente de análisis y comparativa técnica para creadores de contenido.
+            Guía editorial independiente de equipo para creadores de contenido.
           </p>
         </div>
         <div>
           <h4 style="color: var(--text-headline); font-size: 0.95rem; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--font-mono);">Navegación</h4>
           <ul class="footer-links">
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="comparador.html">Comparador Side-by-Side</a></li>
-            <li><a href="index.html#hardware">Hardware Recomendado</a></li>
+            <li><a href="comparador.html">Comparador</a></li>
+            <li><a href="index.html#hardware">Equipo</a></li>
           </ul>
         </div>
         <div>

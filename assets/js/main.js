@@ -4,9 +4,8 @@
  * Características:
  *  1. Osciloscopio de Espectro Sonoro en Tiempo Real (Retina Canvas 60 FPS)
  *  2. Selector Dinámico de Presets de Emisión (Twitch, Podcast, Minimal)
- *  3. Radar de Laboratorio Poligonal 0-10
- *  4. Navegación Móvil Tipo Isla con Trampa Accesible (WCAG 2.1)
- *  5. Acordeón Interactivo de Dudas Frecuentes
+ *  3. Navegación móvil accesible
+ *  4. Acordeón interactivo de preguntas frecuentes
  * ==============================================================================
  */
 
@@ -103,106 +102,6 @@ function initAudioSpectrum(canvasId) {
   render();
 }
 
-// 2. Radar Canvas Renderer (Alta Fidelidad Retina)
-function drawOscilloscopeRadar(canvasId, metrics) {
-  const canvas = document.getElementById(canvasId);
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  const dpr = window.devicePixelRatio || 1;
-  const size = canvas.clientWidth || 320;
-  canvas.width = size * dpr;
-  canvas.height = size * dpr;
-  ctx.scale(dpr, dpr);
-
-  const centerX = size / 2;
-  const centerY = size / 2;
-  const radius = (size / 2) - 44;
-
-  const labels = Object.keys(metrics).map(k => k.replace(/_/g, ' ').toUpperCase());
-  const values = Object.values(metrics);
-  const count = values.length;
-  const angleStep = (Math.PI * 2) / count;
-
-  // Anillos concéntricos
-  ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
-  ctx.lineWidth = 1;
-  for (let level = 1; level <= 5; level++) {
-    ctx.beginPath();
-    const r = (radius / 5) * level;
-    for (let i = 0; i < count; i++) {
-      const angle = (i * angleStep) - (Math.PI / 2);
-      const x = centerX + r * Math.cos(angle);
-      const y = centerY + r * Math.sin(angle);
-      if (i === 0) ctx.moveTo(x, y);
-      else ctx.lineTo(x, y);
-    }
-    ctx.closePath();
-    ctx.stroke();
-  }
-
-  // Ejes radiales
-  for (let i = 0; i < count; i++) {
-    const angle = (i * angleStep) - (Math.PI / 2);
-    ctx.beginPath();
-    ctx.moveTo(centerX, centerY);
-    ctx.lineTo(centerX + radius * Math.cos(angle), centerY + radius * Math.sin(angle));
-    ctx.stroke();
-  }
-
-  // Polígono de datos con resplandor cian de laboratorio
-  ctx.beginPath();
-  for (let i = 0; i < count; i++) {
-    const val = values[i];
-    const r = (radius * (val / 10));
-    const angle = (i * angleStep) - (Math.PI / 2);
-    const x = centerX + r * Math.cos(angle);
-    const y = centerY + r * Math.sin(angle);
-    if (i === 0) ctx.moveTo(x, y);
-    else ctx.lineTo(x, y);
-  }
-  ctx.closePath();
-  
-  const fillGrad = ctx.createRadialGradient(centerX, centerY, 5, centerX, centerY, radius);
-  fillGrad.addColorStop(0, 'rgba(255, 85, 0, 0.42)');
-  fillGrad.addColorStop(1, 'rgba(255, 85, 0, 0.08)');
-  ctx.fillStyle = fillGrad;
-  ctx.fill();
-
-  ctx.strokeStyle = '#ff5500';
-  ctx.lineWidth = 2.4;
-  ctx.shadowColor = 'rgba(255, 85, 0, 0.65)';
-  ctx.shadowBlur = 10;
-  ctx.stroke();
-  ctx.shadowBlur = 0;
-
-  // Vértices y etiquetas numéricas
-  ctx.font = '600 10px "JetBrains Mono", monospace';
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-
-  for (let i = 0; i < count; i++) {
-    const val = values[i];
-    const r = (radius * (val / 10));
-    const angle = (i * angleStep) - (Math.PI / 2);
-    const x = centerX + r * Math.cos(angle);
-    const y = centerY + r * Math.sin(angle);
-
-    ctx.beginPath();
-    ctx.arc(x, y, 4, 0, Math.PI * 2);
-    ctx.fillStyle = '#ff5500';
-    ctx.fill();
-    ctx.strokeStyle = '#f8fafc';
-    ctx.lineWidth = 1.5;
-    ctx.stroke();
-
-    const labelAngle = (i * angleStep) - (Math.PI / 2);
-    const lx = centerX + (radius + 24) * Math.cos(labelAngle);
-    const ly = centerY + (radius + 24) * Math.sin(labelAngle);
-    ctx.fillStyle = '#cbd5e1';
-    ctx.fillText(`${labels[i]} (${val})`, lx, ly);
-  }
-}
-
 // Inicialización global
 document.addEventListener('DOMContentLoaded', () => {
   // A. Espectro sonoro en cabecera
@@ -240,17 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // C. Render de Gráficos Radar
-  document.querySelectorAll('[data-radar]').forEach(el => {
-    try {
-      const metrics = JSON.parse(el.getAttribute('data-radar'));
-      drawOscilloscopeRadar(el.id, metrics);
-    } catch(e) {
-      console.error('Error parseando datos de radar:', e);
-    }
-  });
-
-  // D. Navegación Móvil Accesible (Drawer Flotante)
+  // C. Navegación móvil accesible
   const navToggleBtn = document.getElementById('nav-toggle-btn');
   const mobileNav = document.getElementById('mobile-nav');
 
@@ -285,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // E. Acordeón Interactivo de Dudas Frecuentes (FAQ)
+  // D. Acordeón interactivo de preguntas frecuentes
   const faqTriggers = document.querySelectorAll('.faq-trigger');
   faqTriggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
@@ -311,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Portada editorial: menú, filtros de setup y acordeón de preguntas.
-// Se mantiene separado de los componentes de fichas para no romper los radares existentes.
+// Los módulos de portada se activan solo cuando sus elementos existen.
 document.addEventListener('DOMContentLoaded', () => {
   const menuTrigger = document.getElementById('premium-menu-trigger');
   const mobileMenu = document.getElementById('premium-mobile-menu');

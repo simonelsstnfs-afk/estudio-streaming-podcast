@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="16" fill="#11171d"/>
+  <path d="M17 16h30v32H17z" fill="#e47b58"/>
+  <path d="M42 17 17 42v5h5l25-25z" fill="#11171d" opacity=".16"/>
+  <text x="32" y="39" fill="#11171d" font-family="Arial,sans-serif" font-size="20" font-weight="700" text-anchor="middle">ES</text>
+</svg>
