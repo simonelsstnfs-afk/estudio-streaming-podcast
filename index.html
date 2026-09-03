@@ -116,6 +116,24 @@
           </div>
         </div>
 
+        <!-- Live Audio Spectrum Oscilloscope Bar -->
+        <div class="spectrum-bezel" aria-label="Osciloscopio de frecuencias de estudio">
+          <div class="spectrum-inner">
+            <div class="spectrum-topbar">
+              <div class="spectrum-label">
+                <span class="spectrum-led-live" aria-hidden="true"></span>
+                <span>Entrada DSP en Vivo / Monitoreo 24-bit 96kHz</span>
+              </div>
+              <div class="spectrum-telemetry">
+                <span>Nivel: <strong id="spectrum-live-db" style="color: var(--studio-cyan);">-12.4 dBFS</strong></span>
+                <span>Clipguard: <strong style="color: var(--studio-emerald);">ACTIVO</strong></span>
+                <span>Latencia: <strong style="color: #cbd5e1;">&lt; 1.2 ms</strong></span>
+              </div>
+            </div>
+            <canvas id="studio-spectrum-canvas" class="spectrum-canvas" width="1200" height="64"></canvas>
+          </div>
+        </div>
+
         <!-- Real Technical Specs Strip -->
         <div class="metrics-strip">
           <div class="metric-tile">
@@ -145,10 +163,33 @@
         <p class="section-desc">Fichas con especificaciones contrastadas, análisis acústicos y acceso directo a la oferta oficial en Amazon España.</p>
       </div>
 
+      <!-- Studio Presets Filter Toolbar -->
+      <div class="preset-section">
+        <div class="preset-title">Presets de Configuración Rápida (Filtrar por Tipo de Emisión)</div>
+        <div class="preset-pills" role="toolbar" aria-label="Filtros de preset de setup">
+          <button class="preset-pill active" data-preset="all">
+            <span class="preset-pill-dot" aria-hidden="true"></span>
+            <span>Todo el Setup (7)</span>
+          </button>
+          <button class="preset-pill" data-preset="twitch">
+            <span class="preset-pill-dot" aria-hidden="true"></span>
+            <span>Directos Twitch / Gaming</span>
+          </button>
+          <button class="preset-pill" data-preset="podcast">
+            <span class="preset-pill-dot" aria-hidden="true"></span>
+            <span>Podcasting Profesional</span>
+          </button>
+          <button class="preset-pill" data-preset="minimal">
+            <span class="preset-pill-dot" aria-hidden="true"></span>
+            <span>Setup Minimal / Escritorio Compacto</span>
+          </button>
+        </div>
+      </div>
+
       <div class="bento-showcase">
         
         <!-- Row 1: Flagship Deck (span 8) + Wave 3 (span 4) = 12 cols -->
-        <article class="bento-card-wrapper bento-span-8" id="card-elgato-stream-deck-mk2">
+        <article class="bento-card-wrapper bento-span-8" id="card-elgato-stream-deck-mk2" data-presets="twitch podcast minimal">
           <div class="bento-card-inner">
             <span class="hardware-badge badge-flagship">Centro de Control Insignia</span>
             <h3 class="card-title" style="font-size: 1.45rem;">
@@ -188,7 +229,7 @@
           </div>
         </article>
 
-        <article class="bento-card-wrapper bento-span-4" id="card-elgato-wave-3">
+        <article class="bento-card-wrapper bento-span-4" id="card-elgato-wave-3" data-presets="twitch minimal">
           <div class="bento-card-inner">
             <span class="hardware-badge badge-studio">Micrófono de Condensador</span>
             <h3 class="card-title">
@@ -218,7 +259,7 @@
         </article>
 
         <!-- Row 2: SM7B (span 6) + MV6 (span 6) = 12 cols -->
-        <article class="bento-card-wrapper bento-span-6" id="card-shure-sm7b">
+        <article class="bento-card-wrapper bento-span-6" id="card-shure-sm7b" data-presets="podcast">
           <div class="bento-card-inner">
             <span class="hardware-badge badge-studio">Referencia de Estudio</span>
             <h3 class="card-title"><a href="fichas/shure-sm7b.html">Shure SM7B Micrófono Dinámico Vocal de Referencia</a></h3>
@@ -246,7 +287,7 @@
           </div>
         </article>
 
-        <article class="bento-card-wrapper bento-span-6" id="card-shure-mv6">
+        <article class="bento-card-wrapper bento-span-6" id="card-shure-mv6" data-presets="twitch podcast minimal">
           <div class="bento-card-inner">
             <span class="hardware-badge badge-studio">Dinámico con DSP</span>
             <h3 class="card-title"><a href="fichas/shure-mv6.html">Shure MV6 Micrófono Dinámico USB con Procesador MOTIV DSP</a></h3>
@@ -275,7 +316,7 @@
         </article>
 
         <!-- Row 3: Neo (span 4) + Arm LP (span 4) + Neewer LED (span 4) = 12 cols -->
-        <article class="bento-card-wrapper bento-span-4" id="card-elgato-stream-deck-neo">
+        <article class="bento-card-wrapper bento-span-4" id="card-elgato-stream-deck-neo" data-presets="minimal">
           <div class="bento-card-inner">
             <span class="hardware-badge badge-flagship">Controlador Compacto</span>
             <h3 class="card-title" style="font-size: 1.15rem;"><a href="fichas/elgato-stream-deck-neo.html">Elgato Stream Deck Neo con 8 Teclas LCD Compactas</a></h3>
@@ -295,7 +336,7 @@
           </div>
         </article>
 
-        <article class="bento-card-wrapper bento-span-4" id="card-elgato-wave-mic-arm-lp">
+        <article class="bento-card-wrapper bento-span-4" id="card-elgato-wave-mic-arm-lp" data-presets="twitch podcast minimal">
           <div class="bento-card-inner">
             <span class="hardware-badge badge-support">Soporte de Perfil Bajo</span>
             <h3 class="card-title" style="font-size: 1.15rem;"><a href="fichas/elgato-wave-mic-arm-lp.html">Elgato Wave Mic Arm LP Brazo Articulado de Perfil Bajo</a></h3>
@@ -315,7 +356,7 @@
           </div>
         </article>
 
-        <article class="bento-card-wrapper bento-span-4" id="card-neewer-kit-2-paneles-led-usb">
+        <article class="bento-card-wrapper bento-span-4" id="card-neewer-kit-2-paneles-led-usb" data-presets="twitch podcast">
           <div class="bento-card-inner">
             <span class="hardware-badge badge-support">Iluminación de Estudio</span>
             <h3 class="card-title" style="font-size: 1.15rem;"><a href="fichas/neewer-kit-2-paneles-led-usb.html">NEEWER Kit de 2 Paneles de Luz LED USB Regulables 5600K</a></h3>

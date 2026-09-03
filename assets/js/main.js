@@ -1,12 +1,109 @@
 /* 
  * ==============================================================================
- * ESTUDIO STREAMING & PODCAST PRO — ENGINE INTERACTIVO DE ESTUDIO
- * Versión: High-End Agency Tier (2026)
- * Características: Radar Osciloscopio Canvas, Drawer Móvil Accesible, FAQ Accordion
+ * ESTUDIO STREAMING & PODCAST PRO — ENGINE INTERACTIVO DE ESTUDIO (OVERHAUL TIER)
+ * Características:
+ *  1. Osciloscopio de Espectro Sonoro en Tiempo Real (Retina Canvas 60 FPS)
+ *  2. Selector Dinámico de Presets de Emisión (Twitch, Podcast, Minimal)
+ *  3. Radar de Laboratorio Poligonal 0-10
+ *  4. Navegación Móvil Tipo Isla con Trampa Accesible (WCAG 2.1)
+ *  5. Acordeón Interactivo de Dudas Frecuentes
  * ==============================================================================
  */
 
-// Radar Canvas Renderer (Alta Fidelidad Retina)
+// 1. Osciloscopio de Espectro Sonoro en Tiempo Real
+function initAudioSpectrum(canvasId) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+
+  let animationFrameId = null;
+  let isVisible = true;
+  let step = 0;
+
+  function resize() {
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    ctx.scale(dpr, dpr);
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+
+  // Desactivar animación cuando el usuario no la ve (Optimización de CPU/GPU)
+  const observer = new IntersectionObserver((entries) => {
+    isVisible = entries[0].isIntersecting;
+    if (isVisible && !animationFrameId) {
+      render();
+    }
+  }, { threshold: 0.1 });
+  observer.observe(canvas);
+
+  function render() {
+    if (!isVisible) {
+      animationFrameId = null;
+      return;
+    }
+
+    const w = canvas.getBoundingClientRect().width;
+    const h = canvas.getBoundingClientRect().height;
+    ctx.clearRect(0, 0, w, h);
+
+    const bars = Math.floor(w / 7);
+    const barWidth = 3.5;
+    const centerY = h / 2;
+
+    step += 0.04;
+
+    // Renderizado de barras ecualizadoras de alta precisión
+    for (let i = 0; i < bars; i++) {
+      const x = i * 7;
+      const freq = (i / bars) * Math.PI * 4;
+      const wave1 = Math.sin(freq + step) * 0.45;
+      const wave2 = Math.cos(freq * 1.8 - step * 1.4) * 0.35;
+      const noise = (Math.sin(i * 13.5 + step * 2) + 1) * 0.2;
+      const amplitude = Math.max(0.08, Math.min(0.95, (wave1 + wave2 + noise) * 0.7 + 0.3));
+
+      const barHeight = amplitude * (h * 0.78);
+      const topY = centerY - barHeight / 2;
+
+      // Degradado vertical de estudio
+      const grad = ctx.createLinearGradient(0, topY, 0, topY + barHeight);
+      grad.addColorStop(0, '#22d3ee');
+      grad.addColorStop(0.6, '#06b6d4');
+      grad.addColorStop(1, 'rgba(6, 182, 212, 0.2)');
+
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      if (ctx.roundRect) {
+        ctx.roundRect(x, topY, barWidth, barHeight, 2);
+      } else {
+        ctx.rect(x, topY, barWidth, barHeight);
+      }
+      ctx.fill();
+
+      // Peak highlight dot
+      if (amplitude > 0.65) {
+        ctx.fillStyle = '#f8fafc';
+        ctx.fillRect(x, topY - 2, barWidth, 1.5);
+      }
+    }
+
+    // Actualización dinámica de telemetría si existe el contenedor
+    const telemEl = document.getElementById('spectrum-live-db');
+    if (telemEl && Math.random() < 0.08) {
+      const db = (-12 + Math.sin(step) * 4.5).toFixed(1);
+      telemEl.textContent = `${db} dBFS`;
+    }
+
+    animationFrameId = requestAnimationFrame(render);
+  }
+
+  render();
+}
+
+// 2. Radar Canvas Renderer (Alta Fidelidad Retina)
 function drawOscilloscopeRadar(canvasId, metrics) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
@@ -26,7 +123,7 @@ function drawOscilloscopeRadar(canvasId, metrics) {
   const count = values.length;
   const angleStep = (Math.PI * 2) / count;
 
-  // Concentric polygon rings
+  // Anillos concéntricos
   ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
   ctx.lineWidth = 1;
   for (let level = 1; level <= 5; level++) {
@@ -43,7 +140,7 @@ function drawOscilloscopeRadar(canvasId, metrics) {
     ctx.stroke();
   }
 
-  // Radial axes
+  // Ejes radiales
   for (let i = 0; i < count; i++) {
     const angle = (i * angleStep) - (Math.PI / 2);
     ctx.beginPath();
@@ -52,7 +149,7 @@ function drawOscilloscopeRadar(canvasId, metrics) {
     ctx.stroke();
   }
 
-  // Glowing telemetry polygon
+  // Polígono de datos con resplandor cian de laboratorio
   ctx.beginPath();
   for (let i = 0; i < count; i++) {
     const val = values[i];
@@ -78,7 +175,7 @@ function drawOscilloscopeRadar(canvasId, metrics) {
   ctx.stroke();
   ctx.shadowBlur = 0;
 
-  // Vertices and telemetry values
+  // Vértices y etiquetas numéricas
   ctx.font = '600 10px "JetBrains Mono", monospace';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
@@ -108,7 +205,42 @@ function drawOscilloscopeRadar(canvasId, metrics) {
 
 // Inicialización global
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Render de Gráficos Radar
+  // A. Espectro sonoro en cabecera
+  initAudioSpectrum('studio-spectrum-canvas');
+
+  // B. Selector interactivo de Presets de Estudio
+  const presetPills = document.querySelectorAll('.preset-pill');
+  const bentoCards = document.querySelectorAll('.bento-card-wrapper');
+
+  presetPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      const preset = pill.getAttribute('data-preset');
+      const isAlreadyActive = pill.classList.contains('active');
+
+      presetPills.forEach(p => p.classList.remove('active'));
+
+      if (isAlreadyActive || preset === 'all') {
+        bentoCards.forEach(card => card.classList.remove('highlight-preset'));
+        if (!isAlreadyActive && preset === 'all') {
+          pill.classList.add('active');
+        }
+        return;
+      }
+
+      pill.classList.add('active');
+
+      bentoCards.forEach(card => {
+        const cardPresets = card.getAttribute('data-presets') || '';
+        if (cardPresets.includes(preset)) {
+          card.classList.add('highlight-preset');
+        } else {
+          card.classList.remove('highlight-preset');
+        }
+      });
+    });
+  });
+
+  // C. Render de Gráficos Radar
   document.querySelectorAll('[data-radar]').forEach(el => {
     try {
       const metrics = JSON.parse(el.getAttribute('data-radar'));
@@ -118,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 2. Navegación Móvil Accesible (Drawer Flotante)
+  // D. Navegación Móvil Accesible (Drawer Flotante)
   const navToggleBtn = document.getElementById('nav-toggle-btn');
   const mobileNav = document.getElementById('mobile-nav');
 
@@ -135,19 +267,16 @@ document.addEventListener('DOMContentLoaded', () => {
       toggleMenu();
     });
 
-    // Cerrar al hacer clic en cualquier enlace del menú móvil
     mobileNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => toggleMenu(false));
     });
 
-    // Cerrar al hacer clic fuera del drawer
     document.addEventListener('click', (e) => {
       if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target) && !navToggleBtn.contains(e.target)) {
         toggleMenu(false);
       }
     });
 
-    // Cerrar con tecla Escape (WCAG A11y)
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
         toggleMenu(false);
@@ -156,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Acordeón Interactivo de Dudas Frecuentes (FAQ)
+  // E. Acordeón Interactivo de Dudas Frecuentes (FAQ)
   const faqTriggers = document.querySelectorAll('.faq-trigger');
   faqTriggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
@@ -164,7 +293,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetId = trigger.getAttribute('aria-controls');
       const content = document.getElementById(targetId);
 
-      // Cerrar otros acordeones si se desea comportamiento exclusivo
       faqTriggers.forEach(otherTrigger => {
         if (otherTrigger !== trigger) {
           otherTrigger.setAttribute('aria-expanded', 'false');
@@ -174,7 +302,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Alternar estado actual
       trigger.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
       if (content) {
         content.classList.toggle('open', !isExpanded);
