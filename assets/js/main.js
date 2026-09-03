@@ -1,6 +1,6 @@
 /* 
- * High-End Studio Radar Canvas & Audio Console Engine
- * Cache-Buster: taste_1788448035
+ * Studio Radar Canvas & Audio Console Engine
+ * Cache-Buster: overhaul_1788449150
  */
 
 function drawOscilloscopeRadar(canvasId, metrics) {
@@ -75,7 +75,7 @@ function drawOscilloscopeRadar(canvasId, metrics) {
   ctx.shadowBlur = 0;
 
   // Vertex points & mono labels
-  ctx.font = '500 10px "JetBrains Mono", monospace';
+  ctx.font = '600 10px "JetBrains Mono", monospace';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
 
