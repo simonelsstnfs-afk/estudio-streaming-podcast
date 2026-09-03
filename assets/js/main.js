@@ -1,6 +1,6 @@
 /* 
  * ==============================================================================
- * ESTUDIO STREAMING & PODCAST PRO — ENGINE INTERACTIVO DE ESTUDIO (OVERHAUL TIER)
+ * ESTUDIO STREAMING & PODCAST PRO - ENGINE INTERACTIVO DE ESTUDIO (OVERHAUL TIER)
  * Características:
  *  1. Osciloscopio de Espectro Sonoro en Tiempo Real (Retina Canvas 60 FPS)
  *  2. Selector Dinámico de Presets de Emisión (Twitch, Podcast, Minimal)

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estudio Streaming & Podcast Pro: Hardware de Alta Fidelidad 2026</title>
-  <meta name="description" content="Laboratorio de pruebas de hardware para streaming y podcasting: controladores Stream Deck, micrófonos USB y XLR con DSP y brazos de perfil bajo para emisiones profesionales.">
-  <link rel="stylesheet" href="assets/css/styles.css?v=taste_agency_v3_syne">
+  <title>Estudio Streaming & Podcast Pro: Hardware de Alta Fidelidad</title>
+  <meta name="description" content="Laboratorio de pruebas de hardware para streaming y podcasting: controladores Stream Deck, micrófonos USB y XLR con DSP y soportes de perfil bajo.">
+  <link rel="stylesheet" href="assets/css/styles.css?v=taste_agency_v4_overhaul">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
@@ -37,37 +37,39 @@
     </div>
   </aside>
 
-  <!-- Sticky Studio Console Navbar -->
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a href="index.html" class="nav-brand" aria-label="Estudio Streaming Pro Inicio">
-        <span class="nav-brand-led" aria-hidden="true"></span>
-        <span>EstudioStreaming<span style="color: var(--studio-cyan);">Pro</span></span>
-      </a>
+  <!-- Sticky Studio Floating Island Navbar -->
+  <div class="navbar-wrap">
+    <div class="navbar-island">
+      <header class="navbar">
+        <a href="index.html" class="nav-brand" aria-label="Estudio Streaming Pro Inicio">
+          <span class="nav-brand-led" aria-hidden="true"></span>
+          <span>EstudioStreaming<span style="color: var(--studio-signal);">Pro</span></span>
+        </a>
 
-      <!-- Desktop Navigation -->
-      <nav aria-label="Navegación principal">
-        <ul class="nav-menu">
-          <li><a href="#hardware">Hardware de Estudio</a></li>
-          <li><a href="comparador.html">Comparador Side-by-Side</a></li>
-          <li><a href="#criterios">Criterios de Audio</a></li>
-          <li><a href="#faq">Dudas Frecuentes</a></li>
-          <li>
-            <a href="https://www.amazon.es/dp/B09738CV2G?tag=compraacertada-21" class="nav-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">
-              <span>Oferta Stream Deck</span>
-              <span class="btn-icon-bubble" aria-hidden="true">↗</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <!-- Desktop Navigation -->
+        <nav aria-label="Navegación principal">
+          <ul class="nav-menu">
+            <li><a href="#hardware">Hardware de Estudio</a></li>
+            <li><a href="comparador.html">Comparador Side-by-Side</a></li>
+            <li><a href="#criterios">Criterios de Audio</a></li>
+            <li><a href="#faq">Dudas Frecuentes</a></li>
+            <li>
+              <a href="https://www.amazon.es/dp/B09738CV2G?tag=compraacertada-21" class="nav-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                <span>Oferta Stream Deck</span>
+                <span class="btn-icon-bubble" aria-hidden="true">↗</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
 
-      <!-- Mobile Hamburger Button -->
-      <button class="nav-toggle" id="nav-toggle-btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-nav">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
+        <!-- Mobile Hamburger Button -->
+        <button class="nav-toggle" id="nav-toggle-btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </header>
     </div>
-  </header>
+  </div>
 
   <!-- Mobile Drawer Overlay -->
   <div class="nav-drawer" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Menú móvil">
@@ -86,52 +88,93 @@
   </div>
 
   <main>
-    <!-- Wide Hero Section -->
+    <!-- Hero Section: Editorial Split Architecture -->
     <section class="hero">
       <div class="container">
-        <div class="hero-tag">
-          <span class="hero-tag-led" aria-hidden="true"></span>
-          <span>Hardware & Acústica de Estudio 2026</span>
-        </div>
-        <h1 class="hero-title">
-          Equipamiento de Referencia para <span class="highlight">Streaming & Podcasts</span>
-        </h1>
-        <p class="hero-sub">
-          Análisis de nivel de laboratorio, osciloscopios radar 0-10 y comparativas empíricas de los controladores, micrófonos, brazos e iluminación que definen las emisiones de los mejores creadores.
-        </p>
-
-        <!-- Executive BLUF Console with Double-Bezel Framing -->
-        <div class="bluf-bezel-outer">
-          <div class="bluf-console">
-            <div class="bluf-header">
-              <span class="bluf-title">
-                <span class="hero-tag-led" aria-hidden="true"></span>
-                Veredicto del Laboratorio de Audio
-              </span>
-              <span class="bluf-meta">Actualizado Septiembre 2026</span>
-            </div>
-            <p class="bluf-text">
-              Si buscas un setup de streaming y podcast con máximo control visual y nitidez vocal sin complicaciones analógicas, la combinación ganadora es el <strong>Elgato Stream Deck MK.2</strong> para gestión en un toque de OBS y Discord, el micrófono dinámico <strong>Shure MV6</strong> o el condensador <strong>Wave:3</strong> con tecnología Clipguard, articulado sobre el brazo de perfil bajo <strong>Wave Mic Arm LP</strong>. Emisiones fluidas y sonido limpio desde el primer directo.
+        <div class="hero-split">
+          
+          <!-- Column Left: Editorial Typography & Immediate Action -->
+          <div class="hero-left">
+            <span class="hero-tag">Hardware Broadcast & DSP</span>
+            <h1 class="hero-title">
+              Equipamiento de Referencia para <span class="highlight">Streaming & Podcasts</span>
+            </h1>
+            <p class="hero-sub">
+              Análisis de laboratorio, telemetría DSP en tiempo real y comparativas empíricas del mejor hardware de emisión.
             </p>
-          </div>
-        </div>
 
-        <!-- Live Audio Spectrum Oscilloscope Bar -->
-        <div class="spectrum-bezel" aria-label="Osciloscopio de frecuencias de estudio">
-          <div class="spectrum-inner">
-            <div class="spectrum-topbar">
-              <div class="spectrum-label">
-                <span class="spectrum-led-live" aria-hidden="true"></span>
-                <span>Entrada DSP en Vivo / Monitoreo 24-bit 96kHz</span>
-              </div>
-              <div class="spectrum-telemetry">
-                <span>Nivel: <strong id="spectrum-live-db" style="color: var(--studio-cyan);">-12.4 dBFS</strong></span>
-                <span>Clipguard: <strong style="color: var(--studio-emerald);">ACTIVO</strong></span>
-                <span>Latencia: <strong style="color: #cbd5e1;">&lt; 1.2 ms</strong></span>
+            <div class="hero-actions">
+              <a href="#hardware" class="btn-cta">
+                <span>Explorar Hardware</span>
+                <span class="btn-icon-bubble" aria-hidden="true">↓</span>
+              </a>
+              <a href="comparador.html" class="btn-secondary">
+                <span>Comparador Side-by-Side</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <!-- Inline Presets Filter Pills -->
+            <div class="hero-presets">
+              <span class="hero-presets-lbl">Filtrar por Setup:</span>
+              <div class="preset-pills" role="toolbar" aria-label="Filtros de preset de setup">
+                <button class="preset-pill active" data-preset="all">Todo el Setup (7)</button>
+                <button class="preset-pill" data-preset="twitch">Directos Twitch / Gaming</button>
+                <button class="preset-pill" data-preset="podcast">Podcasting Profesional</button>
+                <button class="preset-pill" data-preset="minimal">Setup Minimal</button>
               </div>
             </div>
-            <canvas id="studio-spectrum-canvas" class="spectrum-canvas" width="1200" height="64"></canvas>
           </div>
+
+          <!-- Column Right: Live Studio Console Rack & Hardware Spotlight -->
+          <div class="hero-right">
+            <div class="hero-console-rack" aria-label="Consola de telemetría de audio y control">
+              <div class="console-inner">
+                <div class="console-header">
+                  <div class="console-status">
+                    <span class="nav-brand-led" aria-hidden="true"></span>
+                    <span>MONITOREO DSP EN VIVO</span>
+                  </div>
+                  <div class="console-telem">
+                    <span>24-bit / 96kHz</span>
+                    <span class="telem-divider">|</span>
+                    <span>Nivel: <strong id="spectrum-live-db" style="color: var(--studio-signal);">-12.4 dBFS</strong></span>
+                  </div>
+                </div>
+
+                <!-- 60fps Real-Time Oscilloscope Canvas -->
+                <div class="console-canvas-wrap">
+                  <canvas id="studio-spectrum-canvas" class="spectrum-canvas" width="680" height="68"></canvas>
+                </div>
+
+                <!-- Hardware Spotlight Tile -->
+                <div class="console-spotlight">
+                  <div class="spotlight-badge">SETUP RECOMENDADO</div>
+                  <div class="spotlight-body">
+                    <div class="spotlight-thumb">
+                      <img src="assets/img/B09738CV2G.jpg" alt="Elgato Stream Deck MK.2" width="54" height="44">
+                    </div>
+                    <div class="spotlight-info">
+                      <div class="spotlight-name">Elgato Stream Deck MK.2 + Shure MV6</div>
+                      <div class="spotlight-specs">15 Teclas LCD · DSP MOTIV · Latencia &lt;1.2ms</div>
+                    </div>
+                    <a href="https://www.amazon.es/dp/B09738CV2G?tag=compraacertada-21" class="btn-cta spotlight-btn" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="Ver oferta en Amazon">
+                      <span>Ver Oferta</span>
+                      <span class="btn-icon-bubble" aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Live Status Bar -->
+                <div class="console-footer">
+                  <span class="status-indicator-tag"><span class="tag-dot" style="background: var(--studio-emerald);"></span> Clipguard Activo</span>
+                  <span class="status-indicator-tag"><span class="tag-dot" style="background: var(--studio-cyan);"></span> Filtro Acústico MOTIV</span>
+                  <span class="status-indicator-tag"><span class="tag-dot" style="background: #a855f7;"></span> USB-C 24-bit</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <!-- Real Technical Specs Strip -->
@@ -161,29 +204,6 @@
       <div class="section-headline">
         <h2 class="section-h2">La Selección Definitiva para Creadores de Contenido</h2>
         <p class="section-desc">Fichas con especificaciones contrastadas, análisis acústicos y acceso directo a la oferta oficial en Amazon España.</p>
-      </div>
-
-      <!-- Studio Presets Filter Toolbar -->
-      <div class="preset-section">
-        <div class="preset-title">Presets de Configuración Rápida (Filtrar por Tipo de Emisión)</div>
-        <div class="preset-pills" role="toolbar" aria-label="Filtros de preset de setup">
-          <button class="preset-pill active" data-preset="all">
-            <span class="preset-pill-dot" aria-hidden="true"></span>
-            <span>Todo el Setup (7)</span>
-          </button>
-          <button class="preset-pill" data-preset="twitch">
-            <span class="preset-pill-dot" aria-hidden="true"></span>
-            <span>Directos Twitch / Gaming</span>
-          </button>
-          <button class="preset-pill" data-preset="podcast">
-            <span class="preset-pill-dot" aria-hidden="true"></span>
-            <span>Podcasting Profesional</span>
-          </button>
-          <button class="preset-pill" data-preset="minimal">
-            <span class="preset-pill-dot" aria-hidden="true"></span>
-            <span>Setup Minimal / Escritorio Compacto</span>
-          </button>
-        </div>
       </div>
 
       <div class="bento-showcase">
@@ -485,25 +505,24 @@
           </tbody>
         </table>
       </div>
-      <div style="text-align: center; margin-top: -16px; margin-bottom: 70px;">
+      <div style="text-align: center; margin-top: 24px; margin-bottom: 70px;">
         <a href="comparador.html" class="btn-secondary" style="padding: 14px 28px; font-size: 0.92rem;">
           <span>Abrir Comparador Side-by-Side Interactivo</span>
-          <span style="color: var(--studio-cyan);" aria-hidden="true">→</span>
+          <span style="color: var(--studio-signal);" aria-hidden="true">→</span>
         </a>
       </div>
     </section>
 
     <!-- Buyer Guide -->
     <section class="container" id="criterios" style="padding-bottom: 70px;">
-      <div class="bluf-bezel-outer">
-        <div class="bluf-console" style="border-left-color: var(--studio-amber);">
-          <div class="bluf-header">
-            <span class="bluf-title" style="color: var(--studio-amber);">
-              <span style="color: var(--studio-amber);" aria-hidden="true">◆</span>
-              Claves de Selección: 3 Principios Acústicos para no Equivocarte
+      <div class="hero-console-rack">
+        <div class="console-inner" style="border-left: 3px solid var(--studio-signal);">
+          <div class="console-header">
+            <span class="console-status">
+              Claves de Selección: 3 Principios Acústicos Esenciales
             </span>
           </div>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 20px;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 16px;">
             <div>
               <h4 style="color: var(--text-headline); font-size: 1.05rem; font-weight: 700; margin-bottom: 10px;">1. Micrófono Dinámico vs. Condensador</h4>
               <p style="font-size: 0.94rem; color: var(--text-body); line-height: 1.7;">
@@ -600,7 +619,7 @@
         <div>
           <div class="nav-brand" style="margin-bottom: 16px;">
             <span class="nav-brand-led" aria-hidden="true"></span>
-            <span>EstudioStreaming<span style="color: var(--studio-cyan);">Pro</span></span>
+            <span>EstudioStreaming<span style="color: var(--studio-signal);">Pro</span></span>
           </div>
           <p style="line-height: 1.75; margin-bottom: 16px; color: var(--text-body);">
             Laboratorio editorial independiente dedicado al análisis, comparativa e información técnica sobre equipamiento para creadores de contenido, podcasters y streamers.
@@ -633,6 +652,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=taste_agency_2026" defer></script>
+  <script src="assets/js/main.js?v=taste_agency_v4" defer></script>
 </body>
 </html>
