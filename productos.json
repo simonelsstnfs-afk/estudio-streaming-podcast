@@ -1,0 +1,144 @@
+[
+  {
+    "asin": "B09738CV2G",
+    "titulo": "Elgato Stream Deck MK.2, Controlador de Estudio con 15 Teclas LCD Macro Personalizables, Carátula Extraíble y Soporte Ajustable",
+    "precio_actual": 119.0,
+    "valoracion": 4.7,
+    "total_resenas": 10173,
+    "categoria_cluster": "INSIGNIA",
+    "url_afiliado": "https://www.amazon.es/dp/B09738CV2G?tag=compraacertada-21",
+    "tag_afiliado": "compraacertada-21",
+    "tag_es_placeholder": false,
+    "puntos_fuertes": [
+      "15 teclas LCD personalizables con feedback visual instantáneo y soporte de iconos animados.",
+      "Ecosistema de plugins masivo para OBS Studio, Twitch, Spotify, Discord, Philips Hue y suites de edición.",
+      "Acciones multisecuencia inteligentes para encender luces, cambiar escenas y mutear micrófonos con un solo toque.",
+      "Soporte de sobremesa con ángulo de 45 grados y cable USB-C desmontable con carátulas intercambiables."
+    ],
+    "puntos_debiles": [
+      "No sustituye una interfaz de audio analógica por sí mismo; requiere periféricos dedicados para control de ganancia física.",
+      "Curva de aprendizaje inicial para configurar perfiles complejos y carpetas anidadas."
+    ]
+  },
+  {
+    "asin": "B088HHWC47",
+    "titulo": "Elgato Wave:3 Micrófono Condensador USB Premium con Cápsula Cardioide, Tecnología Clipguard y Software de Mezcla Wave Link",
+    "precio_actual": 99.99,
+    "valoracion": 4.7,
+    "total_resenas": 9477,
+    "categoria_cluster": "PREMIUM",
+    "url_afiliado": "https://www.amazon.es/dp/B088HHWC47?tag=compraacertada-21",
+    "tag_afiliado": "compraacertada-21",
+    "tag_es_placeholder": false,
+    "puntos_fuertes": [
+      "Tecnología analógica propietaria Clipguard que reconduce los picos de volumen para evitar cualquier distorsión.",
+      "Conversor analógico a digital de 24 bits / 96 kHz para una fidelidad sonora y nitidez vocal de estudio.",
+      "Mezclador digital Wave Link que gestiona hasta 9 canales de audio independientes (juego, chat, música, micro).",
+      "Sensor táctil capacitivo superior para silenciado instantáneo sin ruidos mecánicos de clic."
+    ],
+    "puntos_debiles": [
+      "Al ser condensador capta más reverberación de sala en habitaciones sin acondicionamiento acústico.",
+      "El filtro antipop interno es básico; se recomienda añadir el filtro antipop de malla metálica exterior."
+    ]
+  },
+  {
+    "asin": "B0002E4Z8M",
+    "titulo": "Shure SM7B Micrófono Dinámico Vocal para Grabación, Podcasting y Transmisión en Directo con Filtro Antipop Desmontable y Blindaje Electromagnético",
+    "precio_actual": 398.0,
+    "valoracion": 4.7,
+    "total_resenas": 11878,
+    "categoria_cluster": "PREMIUM",
+    "url_afiliado": "https://www.amazon.es/dp/B0002E4Z8M?tag=compraacertada-21",
+    "tag_afiliado": "compraacertada-21",
+    "tag_es_placeholder": false,
+    "puntos_fuertes": [
+      "El estándar de oro de la industria musical, podcasts de primer nivel y emisiones de radio globales.",
+      "Patrón polar cardioide uniforme que proporciona máximo aislamiento vocal rechazando el ruido de fondo y eco.",
+      "Blindaje electromagnético avanzado contra interferencias de pantallas de PC, transformadores y luces neon.",
+      "Aislamiento antigolpes interno por suspensión neumática que elimina cualquier vibración de mesa."
+    ],
+    "puntos_debiles": [
+      "Requiere conexión XLR y una interfaz o preamplificador de alta ganancia (+60 dB como Cloudlifter o GoXLR).",
+      "Ticket elevado de entrada pensado para creadores y podcasters avanzados."
+    ]
+  },
+  {
+    "asin": "B0DBJ5DBL8",
+    "titulo": "Shure MV6 Micrófono USB Dinámico para Videojuegos, Streaming y Creación de Contenido con DSP MOTIV, Botón Físico de Silencio y Salida Jack 3.5mm",
+    "precio_actual": 148.74,
+    "valoracion": 4.5,
+    "total_resenas": 1258,
+    "categoria_cluster": "CALIDAD_PRECIO",
+    "url_afiliado": "https://www.amazon.es/dp/B0DBJ5DBL8?tag=compraacertada-21",
+    "tag_afiliado": "compraacertada-21",
+    "tag_es_placeholder": false,
+    "puntos_fuertes": [
+      "Cápsula dinámica con aislamiento de voz acústico que rechaza clics de teclado, ratón y ruidos ambientales.",
+      "Procesamiento DSP integrado con modo de nivel automático (Auto Level Mode) que ajusta la ganancia en directo.",
+      "Tecnología Digital Popper Stopper para eliminar consonantes oclusivas molestas sin voluminosos antipops.",
+      "Conexión directa plug-and-play USB-C certificada para Windows, Mac y dispositivos móviles."
+    ],
+    "puntos_debiles": [
+      "No incluye conexión XLR para mesas analógicas, es un micrófono 100% digital nativo USB-C."
+    ]
+  },
+  {
+    "asin": "B097376LKF",
+    "titulo": "Elgato Wave Mic Arm LP, Brazo Articulado de Perfil Bajo para Micrófono con Canales Magnéticos de Ocultación de Cables y Rotación de 360 Grados",
+    "precio_actual": 79.99,
+    "valoracion": 4.6,
+    "total_resenas": 4929,
+    "categoria_cluster": "CROSS_SELLING",
+    "url_afiliado": "https://www.amazon.es/dp/B097376LKF?tag=compraacertada-21",
+    "tag_afiliado": "compraacertada-21",
+    "tag_es_placeholder": false,
+    "puntos_fuertes": [
+      "Diseño de perfil bajo (Low Profile) que se sitúa bajo la línea de visión del monitor sin tapar la webcam.",
+      "Construcción íntegra en metal robusto con muelles internos silenciosos que soportan hasta 2 kg de carga.",
+      "Canales con tapas magnéticas integradas para ocultar cables XLR y USB de forma impecable.",
+      "Rotación de 360 grados y articulaciones ajustables con cabezal de bola para colocación milimétrica."
+    ],
+    "puntos_debiles": [
+      "La abrazadera acolchada requiere una mesa con saliente de al menos 6 cm y grosor máximo de 60 mm."
+    ]
+  },
+  {
+    "asin": "B07T8FBZC2",
+    "titulo": "NEEWER 2x Paneles de Luz de Vídeo LED USB Regulables 5600K con Trípodes Extensibles y 8 Filtros de Color para Streaming y Grabación",
+    "precio_actual": 44.81,
+    "valoracion": 4.2,
+    "total_resenas": 21749,
+    "categoria_cluster": "CROSS_SELLING",
+    "url_afiliado": "https://www.amazon.es/dp/B07T8FBZC2?tag=compraacertada-21",
+    "tag_afiliado": "compraacertada-21",
+    "tag_es_placeholder": false,
+    "puntos_fuertes": [
+      "Kit de iluminación dual completo que permite eliminar sombras con luz principal y luz de relleno.",
+      "Alimentación directa por puerto USB-A de 5V/2A compatible con regletas de mesa o puertos del PC.",
+      "Brillo regulable en 10 niveles del 10% al 100% con temperatura de color equilibrada de 5600K.",
+      "Incluye 8 filtros de color de gelatina (blanco, rojo, amarillo y azul) para efectos de fondo creativos."
+    ],
+    "puntos_debiles": [
+      "No incluye adaptadores de pared de corriente enchufe (requiere puertos USB con suministro constante)."
+    ]
+  },
+  {
+    "asin": "B0CVY4566H",
+    "titulo": "Elgato Stream Deck Neo, Controlador Compacto con 8 Teclas LCD, Barra de Información y Botones Táctiles Infopoints",
+    "precio_actual": 62.99,
+    "valoracion": 4.6,
+    "total_resenas": 1309,
+    "categoria_cluster": "CALIDAD_PRECIO",
+    "url_afiliado": "https://www.amazon.es/dp/B0CVY4566H?tag=compraacertada-21",
+    "tag_afiliado": "compraacertada-21",
+    "tag_es_placeholder": false,
+    "puntos_fuertes": [
+      "8 teclas LCD personalizables con diseño ecológico estilizado en blanco mate.",
+      "Barra de información táctil Infobar que muestra fecha, hora y estados de widgets.",
+      "Perfecto para escritorios compactos o creadores que se inician en la automatización."
+    ],
+    "puntos_debiles": [
+      "Menos teclas que el modelo MK.2, requiriendo mayor uso de carpetas para flujos avanzados."
+    ]
+  }
+]
