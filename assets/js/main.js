@@ -309,3 +309,67 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Portada editorial: menú, filtros de setup y acordeón de preguntas.
+// Se mantiene separado de los componentes de fichas para no romper los radares existentes.
+document.addEventListener('DOMContentLoaded', () => {
+  const menuTrigger = document.getElementById('premium-menu-trigger');
+  const mobileMenu = document.getElementById('premium-mobile-menu');
+
+  if (menuTrigger && mobileMenu) {
+    const setMenuOpen = (open) => {
+      mobileMenu.hidden = !open;
+      menuTrigger.setAttribute('aria-expanded', String(open));
+      menuTrigger.querySelector('.sr-only').textContent = open ? 'Cerrar menú' : 'Abrir menú';
+    };
+
+    menuTrigger.addEventListener('click', () => {
+      setMenuOpen(menuTrigger.getAttribute('aria-expanded') !== 'true');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMenuOpen(false));
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !mobileMenu.hidden) {
+        setMenuOpen(false);
+        menuTrigger.focus();
+      }
+    });
+  }
+
+  const setupFilters = document.querySelectorAll('[data-setup-filter]');
+  const productCards = document.querySelectorAll('[data-setups]');
+
+  setupFilters.forEach((filter) => {
+    filter.addEventListener('click', () => {
+      const setup = filter.dataset.setupFilter;
+
+      setupFilters.forEach((item) => {
+        const isActive = item === filter;
+        item.classList.toggle('is-active', isActive);
+        item.setAttribute('aria-pressed', String(isActive));
+      });
+
+      productCards.forEach((card) => {
+        const matches = setup === 'all' || card.dataset.setups.split(' ').includes(setup);
+        card.hidden = !matches;
+      });
+    });
+  });
+
+  const faqButtons = document.querySelectorAll('[data-faq-button]');
+  faqButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+
+      faqButtons.forEach((item) => {
+        const answer = document.getElementById(item.getAttribute('aria-controls'));
+        const isCurrent = item === button;
+        item.setAttribute('aria-expanded', String(isCurrent && !expanded));
+        if (answer) answer.hidden = !isCurrent || expanded;
+      });
+    });
+  });
+});
