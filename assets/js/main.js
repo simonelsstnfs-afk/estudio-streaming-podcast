@@ -68,11 +68,11 @@ function initAudioSpectrum(canvasId) {
       const barHeight = amplitude * (h * 0.78);
       const topY = centerY - barHeight / 2;
 
-      // Degradado vertical de estudio
+      // Degradado vertical de estudio broadcast
       const grad = ctx.createLinearGradient(0, topY, 0, topY + barHeight);
-      grad.addColorStop(0, '#22d3ee');
-      grad.addColorStop(0.6, '#06b6d4');
-      grad.addColorStop(1, 'rgba(6, 182, 212, 0.2)');
+      grad.addColorStop(0, '#ff7a1a');
+      grad.addColorStop(0.6, '#ff5500');
+      grad.addColorStop(1, 'rgba(255, 85, 0, 0.2)');
 
       ctx.fillStyle = grad;
       ctx.beginPath();
@@ -85,7 +85,7 @@ function initAudioSpectrum(canvasId) {
 
       // Peak highlight dot
       if (amplitude > 0.65) {
-        ctx.fillStyle = '#f8fafc';
+        ctx.fillStyle = '#00e599';
         ctx.fillRect(x, topY - 2, barWidth, 1.5);
       }
     }
@@ -163,14 +163,14 @@ function drawOscilloscopeRadar(canvasId, metrics) {
   ctx.closePath();
   
   const fillGrad = ctx.createRadialGradient(centerX, centerY, 5, centerX, centerY, radius);
-  fillGrad.addColorStop(0, 'rgba(6, 182, 212, 0.38)');
-  fillGrad.addColorStop(1, 'rgba(6, 182, 212, 0.06)');
+  fillGrad.addColorStop(0, 'rgba(255, 85, 0, 0.42)');
+  fillGrad.addColorStop(1, 'rgba(255, 85, 0, 0.08)');
   ctx.fillStyle = fillGrad;
   ctx.fill();
 
-  ctx.strokeStyle = '#06b6d4';
+  ctx.strokeStyle = '#ff5500';
   ctx.lineWidth = 2.4;
-  ctx.shadowColor = 'rgba(6, 182, 212, 0.65)';
+  ctx.shadowColor = 'rgba(255, 85, 0, 0.65)';
   ctx.shadowBlur = 10;
   ctx.stroke();
   ctx.shadowBlur = 0;
@@ -189,7 +189,7 @@ function drawOscilloscopeRadar(canvasId, metrics) {
 
     ctx.beginPath();
     ctx.arc(x, y, 4, 0, Math.PI * 2);
-    ctx.fillStyle = '#06b6d4';
+    ctx.fillStyle = '#ff5500';
     ctx.fill();
     ctx.strokeStyle = '#f8fafc';
     ctx.lineWidth = 1.5;
