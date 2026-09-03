@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estudio Streaming & Podcast Pro: Hardware de Alta Fidelidad 2026</title>
-  <meta name="description" content="Laboratorio de pruebas de hardware para streaming y podcasting: controladores Stream Deck, microfonos USB y XLR con DSP y brazos de perfil bajo para emisiones profesionales.">
-  <link rel="stylesheet" href="assets/css/styles.css?v=overhaul_1788449150">
+  <meta name="description" content="Laboratorio de pruebas de hardware para streaming y podcasting: controladores Stream Deck, micrófonos USB y XLR con DSP y brazos de perfil bajo para emisiones profesionales.">
+  <link rel="stylesheet" href="assets/css/styles.css?v=taste_agency_2026">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   
   <script type="application/ld+json">
   {
@@ -16,7 +16,7 @@
     "@type": "WebSite",
     "name": "Estudio Streaming & Podcast Pro",
     "url": "https://estudio-streaming-podcast.vercel.app/",
-    "description": "Analisis y comparativas tecnicas de equipamiento para creadores de contenido y podcasters.",
+    "description": "Análisis y comparativas técnicas de equipamiento para creadores de contenido y podcasters.",
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://estudio-streaming-podcast.vercel.app/?s={search_term_string}",
@@ -26,64 +26,101 @@
   </script>
 </head>
 <body>
-  <div class="ambient-glow"></div>
+  <!-- Ambient Space Atmosphere -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="ambient-grid-overlay" aria-hidden="true"></div>
 
   <!-- Transparent Affiliate Bar -->
   <aside class="affiliate-disclosure-bar">
     <div class="container">
-      Divulgacion transparente: En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Precios oficiales actualizados en tiempo real.
+      Divulgación transparente: En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Precios y disponibilidad contrastados en tiempo real.
     </div>
   </aside>
 
-  <!-- Single-line Navbar -->
+  <!-- Sticky Studio Console Navbar -->
   <header class="navbar">
     <div class="container nav-inner">
-      <a href="index.html" class="nav-brand">
-        <span class="nav-brand-led"></span>
+      <a href="index.html" class="nav-brand" aria-label="Estudio Streaming Pro Inicio">
+        <span class="nav-brand-led" aria-hidden="true"></span>
         <span>EstudioStreaming<span style="color: var(--studio-cyan);">Pro</span></span>
       </a>
-      <nav>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Navegación principal">
         <ul class="nav-menu">
           <li><a href="#hardware">Hardware de Estudio</a></li>
           <li><a href="comparador.html">Comparador Side-by-Side</a></li>
           <li><a href="#criterios">Criterios de Audio</a></li>
           <li><a href="#faq">Dudas Frecuentes</a></li>
-          <li><a href="https://www.amazon.es/dp/B09738CV2G?tag=compraacertada-21" class="nav-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">Oferta Stream Deck en Amazon</a></li>
+          <li>
+            <a href="https://www.amazon.es/dp/B09738CV2G?tag=compraacertada-21" class="nav-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">
+              <span>Oferta Stream Deck</span>
+              <span class="btn-icon-bubble" aria-hidden="true">↗</span>
+            </a>
+          </li>
         </ul>
       </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-toggle" id="nav-toggle-btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
     </div>
   </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="nav-drawer" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Menú móvil">
+    <ul class="nav-drawer-menu">
+      <li><a href="#hardware" class="mobile-nav-link">Hardware de Estudio</a></li>
+      <li><a href="comparador.html" class="mobile-nav-link">Comparador Side-by-Side</a></li>
+      <li><a href="#criterios" class="mobile-nav-link">Criterios de Audio</a></li>
+      <li><a href="#faq" class="mobile-nav-link">Dudas Frecuentes</a></li>
+      <li>
+        <a href="https://www.amazon.es/dp/B09738CV2G?tag=compraacertada-21" class="btn-cta" style="width: 100%; justify-content: space-between; padding: 12px 18px; margin-top: 8px;" target="_blank" rel="nofollow sponsored noopener noreferrer">
+          <span>Ver Stream Deck en Amazon</span>
+          <span class="btn-icon-bubble" aria-hidden="true">↗</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 
   <main>
     <!-- Wide Hero Section -->
     <section class="hero">
       <div class="container">
         <div class="hero-tag">
-          Hardware & Acustica de Estudio 2026
+          <span class="hero-tag-led" aria-hidden="true"></span>
+          <span>Hardware & Acústica de Estudio 2026</span>
         </div>
         <h1 class="hero-title">
           Equipamiento de Referencia para <span class="highlight">Streaming & Podcasts</span>
         </h1>
         <p class="hero-sub">
-          Analisis de nivel de laboratorio, osciloscopios radar 0-10 y comparativas empiricas de los controladores, microfonos, brazos e iluminacion que definen las emisiones de los mejores creadores.
+          Análisis de nivel de laboratorio, osciloscopios radar 0-10 y comparativas empíricas de los controladores, micrófonos, brazos e iluminación que definen las emisiones de los mejores creadores.
         </p>
 
-        <!-- Executive BLUF Console -->
-        <div class="bluf-console">
-          <div class="bluf-header">
-            <span class="bluf-title">Veredicto del Laboratorio de Audio</span>
-            <span class="bluf-meta">Actualizado Septiembre 2026</span>
+        <!-- Executive BLUF Console with Double-Bezel Framing -->
+        <div class="bluf-bezel-outer">
+          <div class="bluf-console">
+            <div class="bluf-header">
+              <span class="bluf-title">
+                <span class="hero-tag-led" aria-hidden="true"></span>
+                Veredicto del Laboratorio de Audio
+              </span>
+              <span class="bluf-meta">Actualizado Septiembre 2026</span>
+            </div>
+            <p class="bluf-text">
+              Si buscas un setup de streaming y podcast con máximo control visual y nitidez vocal sin complicaciones analógicas, la combinación ganadora es el <strong>Elgato Stream Deck MK.2</strong> para gestión en un toque de OBS y Discord, el micrófono dinámico <strong>Shure MV6</strong> o el condensador <strong>Wave:3</strong> con tecnología Clipguard, articulado sobre el brazo de perfil bajo <strong>Wave Mic Arm LP</strong>. Emisiones fluidas y sonido limpio desde el primer directo.
+            </p>
           </div>
-          <p class="bluf-text">
-            Si buscas un setup de streaming y podcast con maximo control visual y nitidez vocal sin complicaciones analogicas, la combinacion ganadora es el <strong>Elgato Stream Deck MK.2</strong> para gestion en un toque de OBS y Discord, el microfono dinamico <strong>Shure MV6</strong> o el condensador <strong>Wave:3</strong> con tecnologia Clipguard, articulado sobre el brazo de perfil bajo <strong>Wave Mic Arm LP</strong>. Emisiones fluidas y sonido limpio desde el primer directo.
-          </p>
         </div>
 
         <!-- Real Technical Specs Strip -->
         <div class="metrics-strip">
           <div class="metric-tile">
             <div class="metric-num">24-bit / 96 kHz</div>
-            <div class="metric-lbl">Muestreo Digital de Alta Resolucion</div>
+            <div class="metric-lbl">Muestreo Digital de Alta Resolución</div>
           </div>
           <div class="metric-tile">
             <div class="metric-num">15 Teclas LCD</div>
@@ -91,177 +128,212 @@
           </div>
           <div class="metric-tile">
             <div class="metric-num">Clipguard DSP</div>
-            <div class="metric-lbl">Supresion Activa de Picos y Saturacion</div>
+            <div class="metric-lbl">Supresión Activa de Picos y Saturación</div>
           </div>
           <div class="metric-tile">
-            <div class="metric-num">Patron Cardioide</div>
+            <div class="metric-num">Patrón Cardioide</div>
             <div class="metric-lbl">Aislamiento Vocal y Rechazo de Ruido</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Asymmetric Gapless Bento Grid -->
+    <!-- Asymmetric Gapless Bento Grid with Double-Bezel Architecture -->
     <section class="container" id="hardware" style="padding-bottom: 40px;">
       <div class="section-headline">
-        <h2 class="section-h2">La Seleccion Definitiva para Creadores de Contenido</h2>
-        <p class="section-desc">Fichas con especificaciones contrastadas, analisis acusticos y acceso directo a la oferta oficial en Amazon Espana.</p>
+        <h2 class="section-h2">La Selección Definitiva para Creadores de Contenido</h2>
+        <p class="section-desc">Fichas con especificaciones contrastadas, análisis acústicos y acceso directo a la oferta oficial en Amazon España.</p>
       </div>
 
       <div class="bento-showcase">
         
-<!-- Row 1: Flagship Deck (span 8) + Wave 3 (span 4) = 12 cols -->
-<article class="bento-card bento-span-8" id="card-elgato-stream-deck-mk2">
-  <span class="hardware-badge badge-flagship">Centro de Control Insignia</span>
-  <h3 class="card-title" style="font-size: 1.45rem;">
-    <a href="fichas/elgato-stream-deck-mk2.html">Elgato Stream Deck MK.2 con 15 Teclas LCD Macro</a>
-  </h3>
-  <div class="flagship-body">
-    <div class="flagship-img-box">
-      <a href="fichas/elgato-stream-deck-mk2.html">
-        <img src="assets/img/B09738CV2G.jpg" alt="Elgato Stream Deck MK.2 con 15 Teclas LCD Macro" loading="lazy" width="240" height="190">
-      </a>
-    </div>
-    <div>
-      <p style="font-size: 0.94rem; color: var(--text-body); line-height: 1.7; margin-bottom: 14px;">
-        15 teclas LCD interactivas con respuesta tactil y feedback visual. El estandar indiscutible para automatizar escenas de OBS, mutear Discord, lanzar efectos y mezclar audio con un solo toque.
-      </p>
-      <div class="card-specs-grid">
-        <div class="spec-row"><span class="spec-key">Teclas</span><span class="spec-value">15 pantallas LCD</span></div>
-        <div class="spec-row"><span class="spec-key">Conexion</span><span class="spec-value">USB-C desmontable</span></div>
-        <div class="spec-row"><span class="spec-key">Software</span><span class="spec-value">Stream Deck Store</span></div>
-        <div class="spec-row"><span class="spec-key">Valoracion</span><span class="spec-value">4.7 / 5 (10.173)</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="card-bottom">
-    <div>
-      <div class="price-display">119.00 €</div>
-      <div class="stock-pill">Disponible en Amazon Prime</div>
-    </div>
-    <div style="display: flex; gap: 10px;">
-      <a href="fichas/elgato-stream-deck-mk2.html" class="btn-secondary">Ficha & Radar</a>
-      <a href="https://www.amazon.es/dp/B09738CV2G?tag=compraacertada-21" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">Ver en Amazon Espana</a>
-    </div>
-  </div>
-</article>
+        <!-- Row 1: Flagship Deck (span 8) + Wave 3 (span 4) = 12 cols -->
+        <article class="bento-card-wrapper bento-span-8" id="card-elgato-stream-deck-mk2">
+          <div class="bento-card-inner">
+            <span class="hardware-badge badge-flagship">Centro de Control Insignia</span>
+            <h3 class="card-title" style="font-size: 1.45rem;">
+              <a href="fichas/elgato-stream-deck-mk2.html">Elgato Stream Deck MK.2 con 15 Teclas LCD Macro</a>
+            </h3>
+            <div class="flagship-body">
+              <div class="flagship-img-box">
+                <a href="fichas/elgato-stream-deck-mk2.html" tabindex="-1" aria-hidden="true">
+                  <img src="assets/img/B09738CV2G.jpg" alt="Elgato Stream Deck MK.2 con 15 Teclas LCD Macro" loading="lazy" width="240" height="190">
+                </a>
+              </div>
+              <div>
+                <p style="font-size: 0.94rem; color: var(--text-body); line-height: 1.7; margin-bottom: 14px;">
+                  15 teclas LCD interactivas con respuesta táctil y feedback visual. El estándar indiscutible para automatizar escenas de OBS, mutear Discord, lanzar efectos y mezclar audio con un solo toque.
+                </p>
+                <div class="card-specs-grid">
+                  <div class="spec-row"><span class="spec-key">Teclas</span><span class="spec-value">15 pantallas LCD</span></div>
+                  <div class="spec-row"><span class="spec-key">Conexión</span><span class="spec-value">USB-C desmontable</span></div>
+                  <div class="spec-row"><span class="spec-key">Software</span><span class="spec-value">Stream Deck Store</span></div>
+                  <div class="spec-row"><span class="spec-key">Valoración</span><span class="spec-value">4.7 / 5 (10.173)</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-bottom">
+              <div>
+                <div class="price-display">119.00 €</div>
+                <div class="stock-pill">Disponible en Amazon Prime</div>
+              </div>
+              <div style="display: flex; gap: 10px; align-items: center;">
+                <a href="fichas/elgato-stream-deck-mk2.html" class="btn-secondary">Ficha & Radar</a>
+                <a href="https://www.amazon.es/dp/B09738CV2G?tag=compraacertada-21" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                  <span>Ver en Amazon</span>
+                  <span class="btn-icon-bubble" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-<article class="bento-card bento-span-4" id="card-elgato-wave-3">
-  <span class="hardware-badge badge-studio">Micrófono de Condensador</span>
-  <h3 class="card-title">
-    <a href="fichas/elgato-wave-3.html">Elgato Wave:3 Micrófono Condensador USB con Clipguard</a>
-  </h3>
-  <div style="background: var(--bg-inner); border-radius: var(--radius-md); padding: 18px; text-align: center; margin: 12px 0; border: 1px solid var(--border-dim);">
-    <img src="assets/img/B088HHWC47.jpg" alt="Elgato Wave:3 Micrófono Condensador USB con Clipguard" loading="lazy" style="max-height: 145px; margin: 0 auto;">
-  </div>
-  <div class="card-specs-grid">
-    <div class="spec-row"><span class="spec-key">Capsula</span><span class="spec-value">Condensador 24-bit</span></div>
-    <div class="spec-row"><span class="spec-key">Tecnologia</span><span class="spec-value">Clipguard Anti-Clip</span></div>
-  </div>
-  <div class="card-bottom">
-    <div>
-      <div class="price-display">99.99 €</div>
-      <div class="stock-pill">En Stock Prime</div>
-    </div>
-    <div style="display: flex; gap: 8px;">
-      <a href="fichas/elgato-wave-3.html" class="btn-secondary">Radar</a>
-      <a href="https://www.amazon.es/dp/B088HHWC47?tag=compraacertada-21" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">Ver Oferta</a>
-    </div>
-  </div>
-</article>
+        <article class="bento-card-wrapper bento-span-4" id="card-elgato-wave-3">
+          <div class="bento-card-inner">
+            <span class="hardware-badge badge-studio">Micrófono de Condensador</span>
+            <h3 class="card-title">
+              <a href="fichas/elgato-wave-3.html">Elgato Wave:3 Micrófono Condensador USB con Clipguard</a>
+            </h3>
+            <div style="background: var(--bg-card-nested); border-radius: var(--radius-md); padding: 18px; text-align: center; margin: 12px 0; border: 1px solid var(--border-dim);">
+              <img src="assets/img/B088HHWC47.jpg" alt="Elgato Wave:3 Micrófono Condensador USB con Clipguard" loading="lazy" style="max-height: 145px; margin: 0 auto;">
+            </div>
+            <div class="card-specs-grid">
+              <div class="spec-row"><span class="spec-key">Cápsula</span><span class="spec-value">Condensador 24-bit</span></div>
+              <div class="spec-row"><span class="spec-key">Tecnología</span><span class="spec-value">Clipguard Anti-Clip</span></div>
+            </div>
+            <div class="card-bottom">
+              <div>
+                <div class="price-display">99.99 €</div>
+                <div class="stock-pill">En Stock Prime</div>
+              </div>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="fichas/elgato-wave-3.html" class="btn-secondary">Radar</a>
+                <a href="https://www.amazon.es/dp/B088HHWC47?tag=compraacertada-21" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                  <span>Ver Oferta</span>
+                  <span class="btn-icon-bubble" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-<!-- Row 2: SM7B (span 6) + MV6 (span 6) = 12 cols -->
-<article class="bento-card bento-span-6" id="card-shure-sm7b">
-  <span class="hardware-badge badge-studio">Referencia de Estudio</span>
-  <h3 class="card-title"><a href="fichas/shure-sm7b.html">Shure SM7B Micrófono Dinámico Vocal de Referencia</a></h3>
-  <div style="display: flex; gap: 20px; align-items: center; margin: 16px 0;">
-    <div style="background: var(--bg-inner); padding: 14px; border-radius: var(--radius-md); min-width: 130px; text-align: center; border: 1px solid var(--border-dim);">
-      <img src="assets/img/B0002E4Z8M.jpg" alt="Shure SM7B Micrófono Dinámico Vocal de Referencia" loading="lazy" style="max-height: 125px; margin: 0 auto;">
-    </div>
-    <p style="font-size: 0.92rem; color: var(--text-body); line-height: 1.65;">
-      El microfono dinamico vocal legendario de la radio y los podcasts profesionales. Maximo aislamiento acustico, respuesta plana y blindaje electromagnetico.
-    </p>
-  </div>
-  <div class="card-bottom">
-    <div>
-      <div class="price-display">398.00 €</div>
-      <div class="stock-pill">Garantia Shure Oficial</div>
-    </div>
-    <div style="display: flex; gap: 8px;">
-      <a href="fichas/shure-sm7b.html" class="btn-secondary">Radar</a>
-      <a href="https://www.amazon.es/dp/B0002E4Z8M?tag=compraacertada-21" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">Ver en Amazon</a>
-    </div>
-  </div>
-</article>
+        <!-- Row 2: SM7B (span 6) + MV6 (span 6) = 12 cols -->
+        <article class="bento-card-wrapper bento-span-6" id="card-shure-sm7b">
+          <div class="bento-card-inner">
+            <span class="hardware-badge badge-studio">Referencia de Estudio</span>
+            <h3 class="card-title"><a href="fichas/shure-sm7b.html">Shure SM7B Micrófono Dinámico Vocal de Referencia</a></h3>
+            <div style="display: flex; gap: 20px; align-items: center; margin: 16px 0;">
+              <div style="background: var(--bg-card-nested); padding: 16px; border-radius: var(--radius-md); min-width: 130px; text-align: center; border: 1px solid var(--border-dim);">
+                <img src="assets/img/B0002E4Z8M.jpg" alt="Shure SM7B Micrófono Dinámico Vocal de Referencia" loading="lazy" style="max-height: 125px; margin: 0 auto;">
+              </div>
+              <p style="font-size: 0.92rem; color: var(--text-body); line-height: 1.65;">
+                El micrófono dinámico vocal legendario de la radio y los podcasts profesionales. Máximo aislamiento acústico, respuesta plana y blindaje electromagnético.
+              </p>
+            </div>
+            <div class="card-bottom">
+              <div>
+                <div class="price-display">398.00 €</div>
+                <div class="stock-pill">Garantía Shure Oficial</div>
+              </div>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="fichas/shure-sm7b.html" class="btn-secondary">Radar</a>
+                <a href="https://www.amazon.es/dp/B0002E4Z8M?tag=compraacertada-21" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                  <span>Ver en Amazon</span>
+                  <span class="btn-icon-bubble" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-<article class="bento-card bento-span-6" id="card-shure-mv6">
-  <span class="hardware-badge badge-studio">Dinámico con DSP</span>
-  <h3 class="card-title"><a href="fichas/shure-mv6.html">Shure MV6 Micrófono Dinámico USB con Procesador MOTIV DSP</a></h3>
-  <div style="display: flex; gap: 20px; align-items: center; margin: 16px 0;">
-    <div style="background: var(--bg-inner); padding: 14px; border-radius: var(--radius-md); min-width: 130px; text-align: center; border: 1px solid var(--border-dim);">
-      <img src="assets/img/B0DBJ5DBL8.jpg" alt="Shure MV6 Micrófono Dinámico USB con Procesador MOTIV DSP" loading="lazy" style="max-height: 125px; margin: 0 auto;">
-    </div>
-    <p style="font-size: 0.92rem; color: var(--text-body); line-height: 1.65;">
-      Microfono dinamico USB-C con procesador digital MOTIV integrado. Elimina ruidos de fondo, reverberaciones y clics de teclado en habitaciones sin acondicionar.
-    </p>
-  </div>
-  <div class="card-bottom">
-    <div>
-      <div class="price-display">148.74 €</div>
-      <div class="stock-pill">En Stock Prime</div>
-    </div>
-    <div style="display: flex; gap: 8px;">
-      <a href="fichas/shure-mv6.html" class="btn-secondary">Radar</a>
-      <a href="https://www.amazon.es/dp/B0DBJ5DBL8?tag=compraacertada-21" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">Ver en Amazon</a>
-    </div>
-  </div>
-</article>
+        <article class="bento-card-wrapper bento-span-6" id="card-shure-mv6">
+          <div class="bento-card-inner">
+            <span class="hardware-badge badge-studio">Dinámico con DSP</span>
+            <h3 class="card-title"><a href="fichas/shure-mv6.html">Shure MV6 Micrófono Dinámico USB con Procesador MOTIV DSP</a></h3>
+            <div style="display: flex; gap: 20px; align-items: center; margin: 16px 0;">
+              <div style="background: var(--bg-card-nested); padding: 16px; border-radius: var(--radius-md); min-width: 130px; text-align: center; border: 1px solid var(--border-dim);">
+                <img src="assets/img/B0DBJ5DBL8.jpg" alt="Shure MV6 Micrófono Dinámico USB con Procesador MOTIV DSP" loading="lazy" style="max-height: 125px; margin: 0 auto;">
+              </div>
+              <p style="font-size: 0.92rem; color: var(--text-body); line-height: 1.65;">
+                Micrófono dinámico USB-C con procesador digital MOTIV integrado. Elimina ruidos de fondo, reverberaciones y clics de teclado en habitaciones sin acondicionar.
+              </p>
+            </div>
+            <div class="card-bottom">
+              <div>
+                <div class="price-display">148.74 €</div>
+                <div class="stock-pill">En Stock Prime</div>
+              </div>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="fichas/shure-mv6.html" class="btn-secondary">Radar</a>
+                <a href="https://www.amazon.es/dp/B0DBJ5DBL8?tag=compraacertada-21" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                  <span>Ver en Amazon</span>
+                  <span class="btn-icon-bubble" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-<!-- Row 3: Neo (span 4) + Arm LP (span 4) + Neewer LED (span 4) = 12 cols -->
-<article class="bento-card bento-span-4" id="card-elgato-stream-deck-neo">
-  <span class="hardware-badge badge-flagship">Controlador Compacto</span>
-  <h3 class="card-title" style="font-size: 1.15rem;"><a href="fichas/elgato-stream-deck-neo.html">Elgato Stream Deck Neo con 8 Teclas LCD Compactas</a></h3>
-  <div style="background: var(--bg-inner); border-radius: var(--radius-md); padding: 16px; text-align: center; margin: 12px 0; border: 1px solid var(--border-dim);">
-    <img src="assets/img/B0CVY4566H.jpg" alt="Elgato Stream Deck Neo con 8 Teclas LCD Compactas" loading="lazy" style="max-height: 130px; margin: 0 auto;">
-  </div>
-  <div class="card-bottom">
-    <div class="price-display">62.99 €</div>
-    <div style="display: flex; gap: 8px;">
-      <a href="fichas/elgato-stream-deck-neo.html" class="btn-secondary">Ficha</a>
-      <a href="https://www.amazon.es/dp/B0CVY4566H?tag=compraacertada-21" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">Ver Oferta</a>
-    </div>
-  </div>
-</article>
+        <!-- Row 3: Neo (span 4) + Arm LP (span 4) + Neewer LED (span 4) = 12 cols -->
+        <article class="bento-card-wrapper bento-span-4" id="card-elgato-stream-deck-neo">
+          <div class="bento-card-inner">
+            <span class="hardware-badge badge-flagship">Controlador Compacto</span>
+            <h3 class="card-title" style="font-size: 1.15rem;"><a href="fichas/elgato-stream-deck-neo.html">Elgato Stream Deck Neo con 8 Teclas LCD Compactas</a></h3>
+            <div style="background: var(--bg-card-nested); border-radius: var(--radius-md); padding: 16px; text-align: center; margin: 12px 0; border: 1px solid var(--border-dim);">
+              <img src="assets/img/B0CVY4566H.jpg" alt="Elgato Stream Deck Neo con 8 Teclas LCD Compactas" loading="lazy" style="max-height: 130px; margin: 0 auto;">
+            </div>
+            <div class="card-bottom">
+              <div class="price-display">62.99 €</div>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="fichas/elgato-stream-deck-neo.html" class="btn-secondary">Ficha</a>
+                <a href="https://www.amazon.es/dp/B0CVY4566H?tag=compraacertada-21" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                  <span>Ver Oferta</span>
+                  <span class="btn-icon-bubble" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-<article class="bento-card bento-span-4" id="card-elgato-wave-mic-arm-lp">
-  <span class="hardware-badge badge-support">Soporte de Perfil Bajo</span>
-  <h3 class="card-title" style="font-size: 1.15rem;"><a href="fichas/elgato-wave-mic-arm-lp.html">Elgato Wave Mic Arm LP Brazo Articulado de Perfil Bajo</a></h3>
-  <div style="background: var(--bg-inner); border-radius: var(--radius-md); padding: 16px; text-align: center; margin: 12px 0; border: 1px solid var(--border-dim);">
-    <img src="assets/img/B097376LKF.jpg" alt="Elgato Wave Mic Arm LP Brazo Articulado de Perfil Bajo" loading="lazy" style="max-height: 130px; margin: 0 auto;">
-  </div>
-  <div class="card-bottom">
-    <div class="price-display">79.99 €</div>
-    <div style="display: flex; gap: 8px;">
-      <a href="fichas/elgato-wave-mic-arm-lp.html" class="btn-secondary">Ficha</a>
-      <a href="https://www.amazon.es/dp/B097376LKF?tag=compraacertada-21" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">Ver Oferta</a>
-    </div>
-  </div>
-</article>
+        <article class="bento-card-wrapper bento-span-4" id="card-elgato-wave-mic-arm-lp">
+          <div class="bento-card-inner">
+            <span class="hardware-badge badge-support">Soporte de Perfil Bajo</span>
+            <h3 class="card-title" style="font-size: 1.15rem;"><a href="fichas/elgato-wave-mic-arm-lp.html">Elgato Wave Mic Arm LP Brazo Articulado de Perfil Bajo</a></h3>
+            <div style="background: var(--bg-card-nested); border-radius: var(--radius-md); padding: 16px; text-align: center; margin: 12px 0; border: 1px solid var(--border-dim);">
+              <img src="assets/img/B097376LKF.jpg" alt="Elgato Wave Mic Arm LP Brazo Articulado de Perfil Bajo" loading="lazy" style="max-height: 130px; margin: 0 auto;">
+            </div>
+            <div class="card-bottom">
+              <div class="price-display">79.99 €</div>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="fichas/elgato-wave-mic-arm-lp.html" class="btn-secondary">Ficha</a>
+                <a href="https://www.amazon.es/dp/B097376LKF?tag=compraacertada-21" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                  <span>Ver Oferta</span>
+                  <span class="btn-icon-bubble" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-<article class="bento-card bento-span-4" id="card-neewer-kit-2-paneles-led-usb">
-  <span class="hardware-badge badge-support">Iluminación de Estudio</span>
-  <h3 class="card-title" style="font-size: 1.15rem;"><a href="fichas/neewer-kit-2-paneles-led-usb.html">NEEWER Kit de 2 Paneles de Luz LED USB Regulables 5600K</a></h3>
-  <div style="background: var(--bg-inner); border-radius: var(--radius-md); padding: 16px; text-align: center; margin: 12px 0; border: 1px solid var(--border-dim);">
-    <img src="assets/img/B07T8FBZC2.jpg" alt="NEEWER Kit de 2 Paneles de Luz LED USB Regulables 5600K" loading="lazy" style="max-height: 130px; margin: 0 auto;">
-  </div>
-  <div class="card-bottom">
-    <div class="price-display">44.81 €</div>
-    <div style="display: flex; gap: 8px;">
-      <a href="fichas/neewer-kit-2-paneles-led-usb.html" class="btn-secondary">Ficha</a>
-      <a href="https://www.amazon.es/dp/B07T8FBZC2?tag=compraacertada-21" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">Ver Oferta</a>
-    </div>
-  </div>
-</article>
+        <article class="bento-card-wrapper bento-span-4" id="card-neewer-kit-2-paneles-led-usb">
+          <div class="bento-card-inner">
+            <span class="hardware-badge badge-support">Iluminación de Estudio</span>
+            <h3 class="card-title" style="font-size: 1.15rem;"><a href="fichas/neewer-kit-2-paneles-led-usb.html">NEEWER Kit de 2 Paneles de Luz LED USB Regulables 5600K</a></h3>
+            <div style="background: var(--bg-card-nested); border-radius: var(--radius-md); padding: 16px; text-align: center; margin: 12px 0; border: 1px solid var(--border-dim);">
+              <img src="assets/img/B07T8FBZC2.jpg" alt="NEEWER Kit de 2 Paneles de Luz LED USB Regulables 5600K" loading="lazy" style="max-height: 130px; margin: 0 auto;">
+            </div>
+            <div class="card-bottom">
+              <div class="price-display">44.81 €</div>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="fichas/neewer-kit-2-paneles-led-usb.html" class="btn-secondary">Ficha</a>
+                <a href="https://www.amazon.es/dp/B07T8FBZC2?tag=compraacertada-21" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                  <span>Ver Oferta</span>
+                  <span class="btn-icon-bubble" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
 
       </div>
     </section>
@@ -269,177 +341,235 @@
     <!-- Matrix Table -->
     <section class="container" style="padding-bottom: 50px;">
       <div class="section-headline">
-        <h2 class="section-h2">Matriz de Especificaciones Tecnicas</h2>
-        <p class="section-desc">Comparativa directa de precios oficiales, categorias de setup y valoraciones verificadas.</p>
+        <h2 class="section-h2">Matriz de Especificaciones Técnicas</h2>
+        <p class="section-desc">Comparativa directa de precios oficiales, categorías de setup y valoraciones verificadas.</p>
       </div>
 
       <div class="matrix-container">
         <table class="matrix-table">
           <thead>
             <tr>
-              <th>Dispositivo Oficial</th>
-              <th>Rol en el Setup</th>
-              <th>Precio Verificado</th>
-              <th>Valoracion</th>
-              <th>Acceso Directo</th>
+              <th scope="col">Dispositivo Oficial</th>
+              <th scope="col">Rol en el Setup</th>
+              <th scope="col">Precio Verificado</th>
+              <th scope="col">Valoración</th>
+              <th scope="col">Acceso Directo</th>
             </tr>
           </thead>
           <tbody>
-            
-    <tr>
-      <td><strong><a href="fichas/elgato-stream-deck-mk2.html" style="color: var(--text-headline); text-decoration: none;">Elgato Stream Deck MK.2 con 15 Teclas LCD Macro</a></strong></td>
-      <td><span class="hardware-badge badge-studio" style="margin: 0;">Centro de Control Insignia</span></td>
-      <td><span style="font-family: var(--font-mono); font-weight: 700; color: #fff;">119.00 €</span></td>
-      <td><span style="font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">4.7 / 5</span></td>
-      <td>
-        <a href="https://www.amazon.es/dp/B09738CV2G?tag=compraacertada-21" class="btn-cta" style="padding: 6px 14px; font-size: 0.8rem;" target="_blank" rel="nofollow sponsored noopener noreferrer">
-          Ver en Amazon
-        </a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td><strong><a href="fichas/elgato-wave-3.html" style="color: var(--text-headline); text-decoration: none;">Elgato Wave:3 Micrófono Condensador USB con Clipguard</a></strong></td>
-      <td><span class="hardware-badge badge-studio" style="margin: 0;">Micrófono de Condensador</span></td>
-      <td><span style="font-family: var(--font-mono); font-weight: 700; color: #fff;">99.99 €</span></td>
-      <td><span style="font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">4.7 / 5</span></td>
-      <td>
-        <a href="https://www.amazon.es/dp/B088HHWC47?tag=compraacertada-21" class="btn-cta" style="padding: 6px 14px; font-size: 0.8rem;" target="_blank" rel="nofollow sponsored noopener noreferrer">
-          Ver en Amazon
-        </a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td><strong><a href="fichas/shure-sm7b.html" style="color: var(--text-headline); text-decoration: none;">Shure SM7B Micrófono Dinámico Vocal de Referencia</a></strong></td>
-      <td><span class="hardware-badge badge-studio" style="margin: 0;">Referencia de Estudio</span></td>
-      <td><span style="font-family: var(--font-mono); font-weight: 700; color: #fff;">398.00 €</span></td>
-      <td><span style="font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">4.7 / 5</span></td>
-      <td>
-        <a href="https://www.amazon.es/dp/B0002E4Z8M?tag=compraacertada-21" class="btn-cta" style="padding: 6px 14px; font-size: 0.8rem;" target="_blank" rel="nofollow sponsored noopener noreferrer">
-          Ver en Amazon
-        </a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td><strong><a href="fichas/shure-mv6.html" style="color: var(--text-headline); text-decoration: none;">Shure MV6 Micrófono Dinámico USB con Procesador MOTIV DSP</a></strong></td>
-      <td><span class="hardware-badge badge-studio" style="margin: 0;">Dinámico con DSP</span></td>
-      <td><span style="font-family: var(--font-mono); font-weight: 700; color: #fff;">148.74 €</span></td>
-      <td><span style="font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">4.5 / 5</span></td>
-      <td>
-        <a href="https://www.amazon.es/dp/B0DBJ5DBL8?tag=compraacertada-21" class="btn-cta" style="padding: 6px 14px; font-size: 0.8rem;" target="_blank" rel="nofollow sponsored noopener noreferrer">
-          Ver en Amazon
-        </a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td><strong><a href="fichas/elgato-wave-mic-arm-lp.html" style="color: var(--text-headline); text-decoration: none;">Elgato Wave Mic Arm LP Brazo Articulado de Perfil Bajo</a></strong></td>
-      <td><span class="hardware-badge badge-studio" style="margin: 0;">Soporte de Perfil Bajo</span></td>
-      <td><span style="font-family: var(--font-mono); font-weight: 700; color: #fff;">79.99 €</span></td>
-      <td><span style="font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">4.6 / 5</span></td>
-      <td>
-        <a href="https://www.amazon.es/dp/B097376LKF?tag=compraacertada-21" class="btn-cta" style="padding: 6px 14px; font-size: 0.8rem;" target="_blank" rel="nofollow sponsored noopener noreferrer">
-          Ver en Amazon
-        </a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td><strong><a href="fichas/neewer-kit-2-paneles-led-usb.html" style="color: var(--text-headline); text-decoration: none;">NEEWER Kit de 2 Paneles de Luz LED USB Regulables 5600K</a></strong></td>
-      <td><span class="hardware-badge badge-studio" style="margin: 0;">Iluminación de Estudio</span></td>
-      <td><span style="font-family: var(--font-mono); font-weight: 700; color: #fff;">44.81 €</span></td>
-      <td><span style="font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">4.2 / 5</span></td>
-      <td>
-        <a href="https://www.amazon.es/dp/B07T8FBZC2?tag=compraacertada-21" class="btn-cta" style="padding: 6px 14px; font-size: 0.8rem;" target="_blank" rel="nofollow sponsored noopener noreferrer">
-          Ver en Amazon
-        </a>
-      </td>
-    </tr>
-    
-    <tr>
-      <td><strong><a href="fichas/elgato-stream-deck-neo.html" style="color: var(--text-headline); text-decoration: none;">Elgato Stream Deck Neo con 8 Teclas LCD Compactas</a></strong></td>
-      <td><span class="hardware-badge badge-studio" style="margin: 0;">Controlador Compacto</span></td>
-      <td><span style="font-family: var(--font-mono); font-weight: 700; color: #fff;">62.99 €</span></td>
-      <td><span style="font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">4.6 / 5</span></td>
-      <td>
-        <a href="https://www.amazon.es/dp/B0CVY4566H?tag=compraacertada-21" class="btn-cta" style="padding: 6px 14px; font-size: 0.8rem;" target="_blank" rel="nofollow sponsored noopener noreferrer">
-          Ver en Amazon
-        </a>
-      </td>
-    </tr>
-    
+            <tr>
+              <td><strong><a href="fichas/elgato-stream-deck-mk2.html" style="color: var(--text-headline); text-decoration: none;">Elgato Stream Deck MK.2 con 15 Teclas LCD Macro</a></strong></td>
+              <td><span class="hardware-badge badge-studio" style="margin: 0;">Centro de Control Insignia</span></td>
+              <td><span style="font-family: var(--font-mono); font-weight: 700; color: #fff;">119.00 €</span></td>
+              <td><span style="font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">4.7 / 5</span></td>
+              <td>
+                <a href="https://www.amazon.es/dp/B09738CV2G?tag=compraacertada-21" class="btn-cta" style="padding: 6px 14px; font-size: 0.8rem;" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                  <span>Ver en Amazon</span>
+                  <span class="btn-icon-bubble" style="width: 22px; height: 22px; font-size: 0.75rem;" aria-hidden="true">↗</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong><a href="fichas/elgato-wave-3.html" style="color: var(--text-headline); text-decoration: none;">Elgato Wave:3 Micrófono Condensador USB con Clipguard</a></strong></td>
+              <td><span class="hardware-badge badge-studio" style="margin: 0;">Micrófono de Condensador</span></td>
+              <td><span style="font-family: var(--font-mono); font-weight: 700; color: #fff;">99.99 €</span></td>
+              <td><span style="font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">4.7 / 5</span></td>
+              <td>
+                <a href="https://www.amazon.es/dp/B088HHWC47?tag=compraacertada-21" class="btn-cta" style="padding: 6px 14px; font-size: 0.8rem;" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                  <span>Ver en Amazon</span>
+                  <span class="btn-icon-bubble" style="width: 22px; height: 22px; font-size: 0.75rem;" aria-hidden="true">↗</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong><a href="fichas/shure-sm7b.html" style="color: var(--text-headline); text-decoration: none;">Shure SM7B Micrófono Dinámico Vocal de Referencia</a></strong></td>
+              <td><span class="hardware-badge badge-studio" style="margin: 0;">Referencia de Estudio</span></td>
+              <td><span style="font-family: var(--font-mono); font-weight: 700; color: #fff;">398.00 €</span></td>
+              <td><span style="font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">4.7 / 5</span></td>
+              <td>
+                <a href="https://www.amazon.es/dp/B0002E4Z8M?tag=compraacertada-21" class="btn-cta" style="padding: 6px 14px; font-size: 0.8rem;" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                  <span>Ver en Amazon</span>
+                  <span class="btn-icon-bubble" style="width: 22px; height: 22px; font-size: 0.75rem;" aria-hidden="true">↗</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong><a href="fichas/shure-mv6.html" style="color: var(--text-headline); text-decoration: none;">Shure MV6 Micrófono Dinámico USB con Procesador MOTIV DSP</a></strong></td>
+              <td><span class="hardware-badge badge-studio" style="margin: 0;">Dinámico con DSP</span></td>
+              <td><span style="font-family: var(--font-mono); font-weight: 700; color: #fff;">148.74 €</span></td>
+              <td><span style="font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">4.5 / 5</span></td>
+              <td>
+                <a href="https://www.amazon.es/dp/B0DBJ5DBL8?tag=compraacertada-21" class="btn-cta" style="padding: 6px 14px; font-size: 0.8rem;" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                  <span>Ver en Amazon</span>
+                  <span class="btn-icon-bubble" style="width: 22px; height: 22px; font-size: 0.75rem;" aria-hidden="true">↗</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong><a href="fichas/elgato-wave-mic-arm-lp.html" style="color: var(--text-headline); text-decoration: none;">Elgato Wave Mic Arm LP Brazo Articulado de Perfil Bajo</a></strong></td>
+              <td><span class="hardware-badge badge-studio" style="margin: 0;">Soporte de Perfil Bajo</span></td>
+              <td><span style="font-family: var(--font-mono); font-weight: 700; color: #fff;">79.99 €</span></td>
+              <td><span style="font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">4.6 / 5</span></td>
+              <td>
+                <a href="https://www.amazon.es/dp/B097376LKF?tag=compraacertada-21" class="btn-cta" style="padding: 6px 14px; font-size: 0.8rem;" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                  <span>Ver en Amazon</span>
+                  <span class="btn-icon-bubble" style="width: 22px; height: 22px; font-size: 0.75rem;" aria-hidden="true">↗</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong><a href="fichas/neewer-kit-2-paneles-led-usb.html" style="color: var(--text-headline); text-decoration: none;">NEEWER Kit de 2 Paneles de Luz LED USB Regulables 5600K</a></strong></td>
+              <td><span class="hardware-badge badge-studio" style="margin: 0;">Iluminación de Estudio</span></td>
+              <td><span style="font-family: var(--font-mono); font-weight: 700; color: #fff;">44.81 €</span></td>
+              <td><span style="font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">4.2 / 5</span></td>
+              <td>
+                <a href="https://www.amazon.es/dp/B07T8FBZC2?tag=compraacertada-21" class="btn-cta" style="padding: 6px 14px; font-size: 0.8rem;" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                  <span>Ver en Amazon</span>
+                  <span class="btn-icon-bubble" style="width: 22px; height: 22px; font-size: 0.75rem;" aria-hidden="true">↗</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong><a href="fichas/elgato-stream-deck-neo.html" style="color: var(--text-headline); text-decoration: none;">Elgato Stream Deck Neo con 8 Teclas LCD Compactas</a></strong></td>
+              <td><span class="hardware-badge badge-studio" style="margin: 0;">Controlador Compacto</span></td>
+              <td><span style="font-family: var(--font-mono); font-weight: 700; color: #fff;">62.99 €</span></td>
+              <td><span style="font-family: var(--font-mono); color: #fbbf24; font-weight: 700;">4.6 / 5</span></td>
+              <td>
+                <a href="https://www.amazon.es/dp/B0CVY4566H?tag=compraacertada-21" class="btn-cta" style="padding: 6px 14px; font-size: 0.8rem;" target="_blank" rel="nofollow sponsored noopener noreferrer">
+                  <span>Ver en Amazon</span>
+                  <span class="btn-icon-bubble" style="width: 22px; height: 22px; font-size: 0.75rem;" aria-hidden="true">↗</span>
+                </a>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
-      <div style="text-align: center; margin-top: -20px; margin-bottom: 60px;">
-        <a href="comparador.html" class="btn-secondary" style="padding: 13px 26px;">
-          Abrir Comparador Side-by-Side Interactivo
+      <div style="text-align: center; margin-top: -16px; margin-bottom: 70px;">
+        <a href="comparador.html" class="btn-secondary" style="padding: 14px 28px; font-size: 0.92rem;">
+          <span>Abrir Comparador Side-by-Side Interactivo</span>
+          <span style="color: var(--studio-cyan);" aria-hidden="true">→</span>
         </a>
       </div>
     </section>
 
     <!-- Buyer Guide -->
-    <section class="container" id="criterios" style="padding-bottom: 60px;">
-      <div class="bluf-console" style="border-left-color: var(--studio-amber);">
-        <div class="bluf-header">
-          <span class="bluf-title" style="color: var(--studio-amber);">Claves de Seleccion: 3 Principios Acusticos para no Equivocarte</span>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 20px;">
-          <div>
-            <h4 style="color: var(--text-headline); margin-bottom: 8px;">1. Microfono Dinamico vs. Condensador</h4>
-            <p style="font-size: 0.92rem; color: var(--text-body); line-height: 1.65;">
-              En estancias domesticas sin paneles acusticos, los microfonos dinamicos como el <strong>Shure MV6</strong> o <strong>SM7B</strong> rechazan el ruido ambiental y los ecos. Los microfonos de condensador como el <strong>Wave:3</strong> ofrecen mayor agudeza si la sala esta tratada.
-            </p>
+    <section class="container" id="criterios" style="padding-bottom: 70px;">
+      <div class="bluf-bezel-outer">
+        <div class="bluf-console" style="border-left-color: var(--studio-amber);">
+          <div class="bluf-header">
+            <span class="bluf-title" style="color: var(--studio-amber);">
+              <span style="color: var(--studio-amber);" aria-hidden="true">◆</span>
+              Claves de Selección: 3 Principios Acústicos para no Equivocarte
+            </span>
           </div>
-          <div>
-            <h4 style="color: var(--text-headline); margin-bottom: 8px;">2. Control de Flujo con Stream Deck</h4>
-            <p style="font-size: 0.92rem; color: var(--text-body); line-height: 1.65;">
-              Tener que alternar ventanas con Alt+Tab durante una emision o podcast corta la conversacion. Una consola con teclas LCD personalizables ahorra errores y dinamiza el directo de forma profesional.
-            </p>
-          </div>
-          <div>
-            <h4 style="color: var(--text-headline); margin-bottom: 8px;">3. Montura de Perfil Bajo (Low Profile)</h4>
-            <p style="font-size: 0.92rem; color: var(--text-body); line-height: 1.65;">
-              Los brazos convencionales se cruzan delante de tu rostro ante la webcam. El brazo de perfil bajo discurre pegado a la mesa por debajo de la pantalla, dejando limpio el plano de camara.
-            </p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 20px;">
+            <div>
+              <h4 style="color: var(--text-headline); font-size: 1.05rem; font-weight: 700; margin-bottom: 10px;">1. Micrófono Dinámico vs. Condensador</h4>
+              <p style="font-size: 0.94rem; color: var(--text-body); line-height: 1.7;">
+                En estancias domésticas sin paneles acústicos, los micrófonos dinámicos como el <strong>Shure MV6</strong> o <strong>SM7B</strong> rechazan el ruido ambiental y los ecos. Los micrófonos de condensador como el <strong>Wave:3</strong> ofrecen mayor agudeza si la sala está tratada.
+              </p>
+            </div>
+            <div>
+              <h4 style="color: var(--text-headline); font-size: 1.05rem; font-weight: 700; margin-bottom: 10px;">2. Control de Flujo con Stream Deck</h4>
+              <p style="font-size: 0.94rem; color: var(--text-body); line-height: 1.7;">
+                Tener que alternar ventanas con Alt+Tab durante una emisión o podcast corta la conversación. Una consola con teclas LCD personalizables ahorra errores y dinamiza el directo de forma profesional.
+              </p>
+            </div>
+            <div>
+              <h4 style="color: var(--text-headline); font-size: 1.05rem; font-weight: 700; margin-bottom: 10px;">3. Montura de Perfil Bajo (Low Profile)</h4>
+              <p style="font-size: 0.94rem; color: var(--text-body); line-height: 1.7;">
+                Los brazos convencionales se cruzan delante de tu rostro ante la webcam. El brazo de perfil bajo discurre pegado a la mesa por debajo de la pantalla, dejando limpio el plano de cámara.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="container" id="faq" style="padding-bottom: 80px;">
+    <!-- FAQ Accordion (Populated & Accessible) -->
+    <section class="container" id="faq" style="padding-bottom: 90px;">
       <div class="section-headline">
         <h2 class="section-h2">Preguntas Frecuentes sobre Equipamiento de Streaming</h2>
-        <p class="section-desc">Respuestas tecnicas directas a las consultas mas habituales de creadores principiantes y avanzados.</p>
+        <p class="section-desc">Respuestas técnicas directas a las consultas más habituales de creadores principiantes y avanzados.</p>
       </div>
 
       <div class="faq-wrap">
-        
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-1" id="faq-q-1">
+            <span>¿Es mejor un micrófono USB o XLR para comenzar a emitir o grabar podcasts?</span>
+            <span class="faq-icon-indicator" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-content" id="faq-ans-1" role="region" aria-labelledby="faq-q-1">
+            Para la inmensa mayoría de creadores que empiezan, un micrófono USB con procesamiento DSP integrado como el <strong>Shure MV6</strong> o el <strong>Elgato Wave:3</strong> es la opción óptima. Ofrecen resolución de 24-bit/96kHz directamente por conexión USB-C sin necesidad de adquirir una interfaz de audio externa, alimentación Phantom de 48V ni cables XLR adicionales, ahorrando costes y complejidad de configuración.
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-2" id="faq-q-2">
+            <span>¿Por qué el Elgato Stream Deck es considerado esencial frente a atajos de teclado?</span>
+            <span class="faq-icon-indicator" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-content" id="faq-ans-2" role="region" aria-labelledby="faq-q-2">
+            Los atajos de teclado requieren que la ventana de la aplicación correspondiente tenga el foco activo, lo que provoca errores frecuentes en directo. El <strong>Stream Deck MK.2</strong> se comunica directamente a nivel de API con OBS Studio, Discord, Spotify, Twitch y software de iluminación, permitiendo cambiar de escena, silenciar el micrófono o reproducir efectos de sonido con feedback visual instantáneo en sus pantallas LCD sin interrumpir tu juego o conversación.
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-3" id="faq-q-3">
+            <span>¿Qué diferencia real aporta la tecnología Clipguard del Elgato Wave:3?</span>
+            <span class="faq-icon-indicator" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-content" id="faq-ans-3" role="region" aria-labelledby="faq-q-3">
+            La tecnología Clipguard redirige automáticamente la señal de audio a través de una segunda ruta interna con menor ganancia cuando los niveles de entrada alcanzan picos repentinos (gritos, risas inesperadas o aplausos). Esto previene digitalmente la saturación y la distorsión desagradable en la emisión, entregando un sonido limpio y equilibrado sin necesidad de que el creador ajuste constantemente los potenciómetros durante el directo.
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-4" id="faq-q-4">
+            <span>¿Por qué se recomienda un brazo de perfil bajo (Low Profile) en vez de uno convencional?</span>
+            <span class="faq-icon-indicator" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-content" id="faq-ans-4" role="region" aria-labelledby="faq-q-4">
+            Los brazos tradicionales tipo tijera descienden desde arriba y cruzan diagonalmente el encuadre de la cámara web, bloqueando parte del rostro del emisor y estorbando la visión de la pantalla. El <strong>Wave Mic Arm LP</strong> está diseñado para pasar por debajo de los monitores a ras del escritorio, manteniendo la línea de visión totalmente despejada y un encuadre de cámara profesional y minimalista.
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-5" id="faq-q-5">
+            <span>¿Se necesita acondicionamiento acústico para usar el Shure SM7B o Shure MV6?</span>
+            <span class="faq-icon-indicator" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-content" id="faq-ans-5" role="region" aria-labelledby="faq-q-5">
+            Ambos son micrófonos dinámicos con patrón polar cardioide muy cerrado y blindaje electromagnético. A diferencia de los condensadores sensibles, capturan casi exclusivamente el sonido emitido a pocos centímetros de la cápsula y rechazan los rebotes de pared, el eco de habitaciones sin paneles acústicos y el ruido de ventiladores de ordenador. El MV6 añade además un filtro reductor de ruido en tiempo real por DSP especialmente calibrado para dormitorios estándar.
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- High-End Studio Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div>
           <div class="nav-brand" style="margin-bottom: 16px;">
-            <span class="nav-brand-led"></span>
+            <span class="nav-brand-led" aria-hidden="true"></span>
             <span>EstudioStreaming<span style="color: var(--studio-cyan);">Pro</span></span>
           </div>
-          <p style="line-height: 1.7; margin-bottom: 16px;">
-            Laboratorio editorial independiente dedicado al analisis, comparativa e informacion tecnica sobre equipamiento para creadores de contenido, podcasters y streamers.
+          <p style="line-height: 1.75; margin-bottom: 16px; color: var(--text-body);">
+            Laboratorio editorial independiente dedicado al análisis, comparativa e información técnica sobre equipamiento para creadores de contenido, podcasters y streamers.
           </p>
-          <p style="font-size: 0.78rem; line-height: 1.6;">
+          <p style="font-size: 0.8rem; line-height: 1.6; color: var(--text-dim);">
             En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Amazon y el logotipo de Amazon son marcas comerciales de Amazon.com, Inc. o sus filiales.
           </p>
         </div>
         <div>
-          <h4 style="color: var(--text-headline); margin-bottom: 16px;">Navegacion</h4>
+          <h4 style="color: var(--text-headline); font-size: 0.95rem; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--font-mono);">Navegación</h4>
           <ul class="footer-links">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="comparador.html">Comparador Side-by-Side</a></li>
@@ -448,20 +578,20 @@
           </ul>
         </div>
         <div>
-          <h4 style="color: var(--text-headline); margin-bottom: 16px;">Marco Legal</h4>
+          <h4 style="color: var(--text-headline); font-size: 0.95rem; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--font-mono);">Marco Legal</h4>
           <ul class="footer-links">
-            <li><a href="aviso-legal.html">Aviso Legal y Afiliacion</a></li>
-            <li><a href="privacidad.html">Politica de Privacidad</a></li>
-            <li><a href="cookies.html">Politica de Cookies</a></li>
+            <li><a href="aviso-legal.html">Aviso Legal y Afiliación</a></li>
+            <li><a href="privacidad.html">Política de Privacidad</a></li>
+            <li><a href="cookies.html">Política de Cookies</a></li>
           </ul>
         </div>
       </div>
-      <div style="border-top: 1px solid var(--border-dim); padding-top: 24px; text-align: center;">
-        <p>&copy; 2026 Estudio Streaming Pro. Todos los derechos reservados. Arquitectura de ingenieria visual y acustica.</p>
+      <div style="border-top: 1px solid var(--border-dim); padding-top: 26px; text-align: center; font-size: 0.82rem; color: var(--text-dim);">
+        <p>&copy; 2026 Estudio Streaming Pro. Todos los derechos reservados. Arquitectura de ingeniería visual y acústica.</p>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=overhaul_1788449150" defer></script>
+  <script src="assets/js/main.js?v=taste_agency_2026" defer></script>
 </body>
 </html>
